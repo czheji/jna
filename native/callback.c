@@ -52,7 +52,7 @@ extern "C" {
 #endif
 
 #if defined(_WIN32) && !defined(_WIN32_WCE)
-#include "com_sun_jna_win32_DLLCallback.h"
+#include "com_zcsmart_jna_win32_DLLCallback.h"
 #ifdef _WIN64
 #ifdef _MSC_VER
 /* See dll-callback.c (compiled with mingw64) for actual definitions; no
@@ -76,7 +76,7 @@ _asmfn" #X ":\n\
 #endif /* _WIN64 */
 
 // Allocatable trampoline targets
-#define DLL_FPTRS com_sun_jna_win32_DLLCallback_DLL_FPTRS
+#define DLL_FPTRS com_zcsmart_jna_win32_DLLCallback_DLL_FPTRS
 void (*fn[DLL_FPTRS])();
 
 ASMFN(0);ASMFN(1);ASMFN(2);ASMFN(3);ASMFN(4);ASMFN(5);ASMFN(6);ASMFN(7);
