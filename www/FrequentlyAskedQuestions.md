@@ -173,7 +173,7 @@ There is an implementation included in the regular JNA distribution built with c
 Why does the VM sometimes crash in my shutdown hook on Windows?
 ---------------------------------------------------------------
 
-If you are using direct mapping, make sure you keep a reference to the JNA class `com.sun.jna.Native` until your shutdown hook completes. If you are using interface mapping, your library proxy will be keeping a reference internally, so an explicit reference is not required.
+If you are using direct mapping, make sure you keep a reference to the JNA class `Native` until your shutdown hook completes. If you are using interface mapping, your library proxy will be keeping a reference internally, so an explicit reference is not required.
 
 If JNA unpacks its native code from its own jar file, it saves it in a temporary location and attempts to remove it when the `Native` class is finalized (which may or may not happen as the VM exits). In order to do so, it must first unload its native library from memory.
 
@@ -237,6 +237,6 @@ windows code page encoding and a “W” suffix indicates a function expecting w
 
 JNA won't automatically resolve one or the other variant. You should use a
 a combination of TypeMapper and FunctionMapper (see 
-`com.sun.jna.win32.W32APIOptions.DEFAULT_OPTIONS`) so that you can leave off the 
+`W32APIOptions.DEFAULT_OPTIONS`) so that you can leave off the 
 “-A” or “-W” suffix (you never need to use both simultaneously) and use 
 “String” rather than explicit “WString”.

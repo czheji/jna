@@ -78,7 +78,7 @@ public class JNALoadTest extends TestCase implements Paths {
     protected void assertLibraryExists() {
         String osPrefix = Platform.getNativeLibraryResourcePrefix();
         String name = System.mapLibraryName("jnidispatch").replace(".dylib", ".jnilib");
-        File lib = new File(CLASSES + "/com/sun/jna/" + osPrefix + "/" + name);
+        File lib = new File(CLASSES + "/com/zcsmart/jna/" + osPrefix + "/" + name);
         if (!lib.exists()) {
             throw new Error("Expected JNA library at " + lib + " is missing");
         }
@@ -87,9 +87,9 @@ public class JNALoadTest extends TestCase implements Paths {
     public void testAvoidJarUnpacking() throws Exception {
         System.setProperty("jna.nounpack", "true");
         try {
-            Class<?> cls = Class.forName("com.sun.jna.Native", true, new TestLoader(true));
+            Class<?> cls = Class.forName("Native", true, new TestLoader(true));
 
-            fail("Class com.sun.jna.Native should not be loadable if jna.nounpack=true: "
+            fail("Class Native should not be loadable if jna.nounpack=true: "
                  + cls.getClassLoader());
         }
         catch(UnsatisfiedLinkError e) {
@@ -102,9 +102,9 @@ public class JNALoadTest extends TestCase implements Paths {
     public void testAvoidResourcePathLoading() throws Exception {
         System.setProperty("jna.noclasspath", "true");
         try {
-            Class<?> cls = Class.forName("com.sun.jna.Native", true, new TestLoader(false));
+            Class<?> cls = Class.forName("Native", true, new TestLoader(false));
 
-            fail("Class com.sun.jna.Native should not be loadable if jna.noclasspath=true: "
+            fail("Class Native should not be loadable if jna.noclasspath=true: "
                  + cls.getClassLoader());
         }
         catch(UnsatisfiedLinkError e) {
@@ -116,7 +116,7 @@ public class JNALoadTest extends TestCase implements Paths {
 
     public void testLoadAndUnloadFromJar() throws Exception {
         ClassLoader loader = new TestLoader(true);
-        Class<?> cls = Class.forName("com.sun.jna.Native", true, loader);
+        Class<?> cls = Class.forName("Native", true, loader);
         assertEquals("Wrong class loader", loader, cls.getClassLoader());
         assertTrue("System property jna.loaded not set", Boolean.getBoolean("jna.loaded"));
 
@@ -155,7 +155,7 @@ public class JNALoadTest extends TestCase implements Paths {
         // already loaded in another class loader
         try {
             loader = new TestLoader(true);
-            cls = Class.forName("com.sun.jna.Native", true, loader);
+            cls = Class.forName("Native", true, loader);
         } catch(Throwable t) {
             fail("Couldn't load class again after discarding first load: " + t.getMessage());
         } finally {
@@ -168,7 +168,7 @@ public class JNALoadTest extends TestCase implements Paths {
     // GC Fails under OpenJDK(linux/ppc)
     public void testLoadAndUnloadFromResourcePath() throws Exception {
         ClassLoader loader = new TestLoader(false);
-        Class<?> cls = Class.forName("com.sun.jna.Native", true, loader);
+        Class<?> cls = Class.forName("Native", true, loader);
         assertEquals("Wrong class loader", loader, cls.getClassLoader());
         assertTrue("System property jna.loaded not set", Boolean.getBoolean("jna.loaded"));
 
@@ -197,7 +197,7 @@ public class JNALoadTest extends TestCase implements Paths {
             GCWaits.gcRun();
             try {
                 loader = new TestLoader(false);
-                cls = Class.forName("com.sun.jna.Native", true, loader);
+                cls = Class.forName("Native", true, loader);
                 break;
             }
             catch(Throwable t) {
@@ -238,7 +238,7 @@ public class JNALoadTest extends TestCase implements Paths {
             System.setProperty("jnidispatch.preserve", "true");
             System.setProperty("jna.tmpdir", unicodeDir.getAbsolutePath());
             ClassLoader loader = new TestLoader(true);
-            Class<?> cls = Class.forName("com.sun.jna.Native", true, loader);
+            Class<?> cls = Class.forName("Native", true, loader);
             assertEquals("Wrong class loader", loader, cls.getClassLoader());
             assertTrue("System property jna.loaded not set", Boolean.getBoolean("jna.loaded"));
 

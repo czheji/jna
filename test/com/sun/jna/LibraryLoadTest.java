@@ -77,7 +77,7 @@ public class LibraryLoadTest extends TestCase implements Paths {
 
     public void testExtractFromResourcePathWithNullClassLoader() throws Exception {
         // doesn't actually load the resource
-        assertNotNull(Native.extractFromResourcePath("/com/sun/jna/LibraryLoadTest.class", null));
+        assertNotNull(Native.extractFromResourcePath("/com/zcsmart/jna/LibraryLoadTest.class", null));
     }
 
     public void testLoadFromJNALibraryPath() {

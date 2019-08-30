@@ -70,7 +70,7 @@ public class MSOfficeDemo {
             Helper.sleep(5);
 
             demoDocument = Helper.createNotExistingFile("jnatest", ".doc");
-            Helper.extractClasspathFileToReal("/com/sun/jna/platform/win32/COM/util/office/resources/jnatest.doc", demoDocument);
+            Helper.extractClasspathFileToReal("/com/zcsmart/jna/platform/win32/COM/util/office/resources/jnatest.doc", demoDocument);
 
             msWord.openDocument(demoDocument.getAbsolutePath());
             msWord.insertText("Hello from JNA! \n\n");
@@ -130,7 +130,7 @@ public class MSOfficeDemo {
             Helper.sleep(5);
 
             demoDocument = Helper.createNotExistingFile("jnatest", ".xls");
-            Helper.extractClasspathFileToReal("/com/sun/jna/platform/win32/COM/util/office/resources/jnatest.xls", demoDocument);
+            Helper.extractClasspathFileToReal("/com/zcsmart/jna/platform/win32/COM/util/office/resources/jnatest.xls", demoDocument);
 
             msExcel.openExcelBook(demoDocument.getAbsolutePath());
             msExcel.insertValue("A1", "Hello from JNA!");

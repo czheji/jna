@@ -70,6 +70,6 @@ public class TlbPropertyGetStub extends TlbAbstractMethod {
      */
     @Override
     protected String getClassTemplate() {
-        return "com/sun/jna/platform/win32/COM/tlb/imp/TlbPropertyGetStub.template";
+        return "com/zcsmart/jna/platform/win32/COM/tlb/imp/TlbPropertyGetStub.template";
     }
 }

@@ -84,6 +84,6 @@ public class TlbPropertyPutStub extends TlbAbstractMethod {
      */
     @Override
     protected String getClassTemplate() {
-        return "com/sun/jna/platform/win32/COM/tlb/imp/TlbPropertyPutStub.template";
+        return "com/zcsmart/jna/platform/win32/COM/tlb/imp/TlbPropertyPutStub.template";
     }
 }

@@ -64,7 +64,7 @@ public class MSOfficeWordDemo {
             msWord.setVisible(true);
 
             demoDocument = Helper.createNotExistingFile("jnatest", ".doc");
-            Helper.extractClasspathFileToReal("/com/sun/jna/platform/win32/COM/util/office/resources/jnatest.doc", demoDocument);
+            Helper.extractClasspathFileToReal("/com/zcsmart/jna/platform/win32/COM/util/office/resources/jnatest.doc", demoDocument);
 
             msWord.getDocuments().Open(demoDocument.getAbsolutePath());
 

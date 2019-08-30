@@ -9,9 +9,9 @@ The following example maps the printf function from the standard C library and c
 ``` java
 package com.sun.jna.examples;
 
-import com.sun.jna.Library;
-import com.sun.jna.Native;
-import com.sun.jna.Platform;
+import Library;
+import Native;
+import Platform;
 
 /** Simple example of JNA interface mapping and usage. */
 public class HelloWorld {
@@ -54,7 +54,7 @@ import com.sun.jna.*;
 
 // kernel32.dll uses the __stdcall calling convention (check the function
 // declaration for "WINAPI" or "PASCAL"), so extend StdCallLibrary
-// Most C libraries will just extend com.sun.jna.Library,
+// Most C libraries will just extend Library,
 public interface Kernel32 extends StdCallLibrary { 
     // Method declarations, constant and structure definitions go here
 }

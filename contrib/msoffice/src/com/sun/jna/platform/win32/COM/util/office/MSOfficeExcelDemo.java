@@ -69,7 +69,7 @@ public class MSOfficeExcelDemo {
             Helper.sleep(5);
 
             demoDocument = Helper.createNotExistingFile("jnatest", ".xls");
-            Helper.extractClasspathFileToReal("/com/sun/jna/platform/win32/COM/util/office/resources/jnatest.xls", demoDocument);
+            Helper.extractClasspathFileToReal("/com/zcsmart/jna/platform/win32/COM/util/office/resources/jnatest.xls", demoDocument);
 
             ComIWorkbook workbook = msExcel.getWorkbooks().Open(demoDocument.getAbsolutePath());
             msExcel.getActiveSheet().getRange("A1").setValue("Hello from JNA!");

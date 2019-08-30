@@ -25,8 +25,7 @@ package com.sun.jna.wince;
 
 import junit.framework.TestCase;
 import com.sun.jna.*;
-import com.sun.jna.ptr.*;
-import com.sun.jna.win32.*;
+
 import java.util.List;
 
 public class CoreDLLTest extends TestCase {

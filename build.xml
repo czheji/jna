@@ -217,10 +217,10 @@
 
     <replaceregexp match='VERSION = ".*";'
                    replace='VERSION = "${jna.version}";'
-                   file="src/com/sun/jna/Version.java"/>
+                   file="src/com/zcsmart/jna/Version.java"/>
     <replaceregexp match='VERSION_NATIVE = ".*";'
                    replace='VERSION_NATIVE = "${jni.version}";'
-                   file="src/com/sun/jna/Version.java"/>
+                   file="src/com/zcsmart/jna/Version.java"/>
 
     <condition property="jar.omitted" value="**/*jnidispatch*" else="jnilib-included">
       <isset property="omit-jnilib"/>
@@ -410,7 +410,7 @@
       -->
     <jar jarfile="${build}/${jar}" duplicate="preserve">
       <manifest>
-        <attribute name="Main-Class" value="com.sun.jna.Native"/>
+        <attribute name="Main-Class" value="com.zcsmart.jna.Native"/>
         <attribute name="Manifest-Version" value="1.0"/>
         <attribute name="Implementation-Title" value="${impl.title}"/>
         <attribute name="Implementation-Vendor" value="${vendor}"/>
@@ -1304,7 +1304,7 @@ cd ..
              classpathref="javadoc.compile.path"
              maxmemory="256m"
              packagenames="com.sun.jna,com.sun.jna.ptr,com.sun.jna.types,com.sun.jna.platform,com.sun.jna.platform.win32"
-             overview="${src}/com/sun/jna/overview.html"
+             overview="/com/zcsmart/jna/overview.html"
              additionalparam="${javadoc.opts}"
              destdir="${javadoc}">
       <!-- stylesheetfile="${stylesheet}" -->

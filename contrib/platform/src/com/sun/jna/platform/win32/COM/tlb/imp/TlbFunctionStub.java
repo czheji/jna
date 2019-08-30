@@ -91,6 +91,6 @@ public class TlbFunctionStub extends TlbAbstractMethod {
      */
     @Override
     protected String getClassTemplate() {
-        return "com/sun/jna/platform/win32/COM/tlb/imp/TlbFunctionStub.template";
+        return "com/zcsmart/jna/platform/win32/COM/tlb/imp/TlbFunctionStub.template";
     }
 }

@@ -115,6 +115,6 @@ public class TlbEnum extends TlbBase {
      */
     @Override
     protected String getClassTemplate() {
-        return "com/sun/jna/platform/win32/COM/tlb/imp/TlbEnum.template";
+        return "com/zcsmart/jna/platform/win32/COM/tlb/imp/TlbEnum.template";
     }
 }

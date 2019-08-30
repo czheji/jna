@@ -128,6 +128,6 @@ public class TlbDispInterface extends TlbBase {
      */
     @Override
     protected String getClassTemplate() {
-        return "com/sun/jna/platform/win32/COM/tlb/imp/TlbDispInterface.template";
+        return "com/zcsmart/jna/platform/win32/COM/tlb/imp/TlbDispInterface.template";
     }
 }

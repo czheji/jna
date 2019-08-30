@@ -104,9 +104,9 @@
         <mkdir dir="${build.native.folder}"/>
         <echo level="info" message="Create native class headers in ${build.native.folder}"/>
         <javah classpath="${module.target.classes}" destdir="${build.native.folder}" force="yes" verbose="true">
-            <class name="com.sun.jna.Function"/>
-            <class name="com.sun.jna.Native"/>
-            <class name="com.sun.jna.win32.DLLCallback"/>
+            <class name="com.zcsmart.jna.Function"/>
+            <class name="com.zcsmart.jna.Native"/>
+            <class name="com.zcsmart.jna.win32.DLLCallback"/>
         </javah>
         <condition property="grep" value="/usr/sfw/bin/ggrep">
             <os name="SunOS"/>
