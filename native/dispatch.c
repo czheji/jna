@@ -2454,7 +2454,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointe
  * Method:    read
  * Signature: (Lcom/sun/jna/Pointer;JJ[III)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_read__Lcom_sun_jna_Pointer_2JJ_3III
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointer_2JJ_3III
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jintArray arr, jint off, jint n)
 {
   PSTART();
@@ -2463,11 +2463,11 @@ JNIEXPORT void JNICALL Java_com_sun_jna_Native_read__Lcom_sun_jna_Pointer_2JJ_3I
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    read
  * Signature: (Lcom/sun/jna/Pointer;JJ[JII)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_read__Lcom_sun_jna_Pointer_2JJ_3JII
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointer_2JJ_3JII
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jlongArray arr, jint off, jint n)
 {
   PSTART();
@@ -2476,11 +2476,11 @@ JNIEXPORT void JNICALL Java_com_sun_jna_Native_read__Lcom_sun_jna_Pointer_2JJ_3J
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    read
  * Signature: (Lcom/sun/jna/Pointer;JJ[SII)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_read__Lcom_sun_jna_Pointer_2JJ_3SII
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointer_2JJ_3SII
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jshortArray arr, jint off, jint n)
 {
   PSTART();
@@ -2489,11 +2489,11 @@ JNIEXPORT void JNICALL Java_com_sun_jna_Native_read__Lcom_sun_jna_Pointer_2JJ_3S
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    getByte
  * Signature: (Lcom/sun/jna/Pointer;JJ)B
  */
-JNIEXPORT jbyte JNICALL Java_com_sun_jna_Native_getByte
+JNIEXPORT jbyte JNICALL Java_com_zcsmart_jna_Native_getByte
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)
 {
     jbyte res = 0;
@@ -2502,11 +2502,11 @@ JNIEXPORT jbyte JNICALL Java_com_sun_jna_Native_getByte
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    getChar
  * Signature: (Lcom/sun/jna/Pointer;JJ)C
  */
-JNIEXPORT jchar JNICALL Java_com_sun_jna_Native_getChar
+JNIEXPORT jchar JNICALL Java_com_zcsmart_jna_Native_getChar
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)
 {
     wchar_t res = 0;
@@ -2515,11 +2515,11 @@ JNIEXPORT jchar JNICALL Java_com_sun_jna_Native_getChar
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    _getPointer
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_com_sun_jna_Native__1getPointer
+JNIEXPORT jlong JNICALL Java_com_zcsmart_jna_Native__1getPointer
 (JNIEnv *UNUSED_ENV(env), jclass UNUSED(cls), jlong addr)
 {
     void *ptr = NULL;
@@ -2528,11 +2528,11 @@ JNIEXPORT jlong JNICALL Java_com_sun_jna_Native__1getPointer
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    getDirectByteBuffer
  * Signature: (Lcom/sun/jna/Pointer;JJJ)Ljava/nio/ByteBuffer;
  */
-JNIEXPORT jobject JNICALL Java_com_sun_jna_Native_getDirectByteBuffer__Lcom_sun_jna_Pointer_2JJJ
+JNIEXPORT jobject JNICALL Java_com_zcsmart_jna_Native_getDirectByteBuffer__Lcom_zcsmart_jna_Pointer_2JJJ
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jlong length)
 {
 #ifdef NO_NIO_BUFFERS
@@ -2543,11 +2543,11 @@ JNIEXPORT jobject JNICALL Java_com_sun_jna_Native_getDirectByteBuffer__Lcom_sun_
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    getDouble
  * Signature: (Lcom/sun/jna/Pointer;JJ)D
  */
-JNIEXPORT jdouble JNICALL Java_com_sun_jna_Native_getDouble
+JNIEXPORT jdouble JNICALL Java_com_zcsmart_jna_Native_getDouble
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)
 {
     jdouble res = 0;
@@ -2556,11 +2556,11 @@ JNIEXPORT jdouble JNICALL Java_com_sun_jna_Native_getDouble
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    getFloat
  * Signature: (Lcom/sun/jna/Pointer;JJ)F
  */
-JNIEXPORT jfloat JNICALL Java_com_sun_jna_Native_getFloat
+JNIEXPORT jfloat JNICALL Java_com_zcsmart_jna_Native_getFloat
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)
 {
     jfloat res = 0;
@@ -2569,11 +2569,11 @@ JNIEXPORT jfloat JNICALL Java_com_sun_jna_Native_getFloat
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    getInt
  * Signature: (Lcom/sun/jna/Pointer;JJ)I
  */
-JNIEXPORT jint JNICALL Java_com_sun_jna_Native_getInt
+JNIEXPORT jint JNICALL Java_com_zcsmart_jna_Native_getInt
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)
 {
     jint res = 0;
@@ -2582,11 +2582,11 @@ JNIEXPORT jint JNICALL Java_com_sun_jna_Native_getInt
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    getLong
  * Signature: (Lcom/sun/jna/Pointer;JJ)J
  */
-JNIEXPORT jlong JNICALL Java_com_sun_jna_Native_getLong
+JNIEXPORT jlong JNICALL Java_com_zcsmart_jna_Native_getLong
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)
 {
     jlong res = 0;
@@ -2595,11 +2595,11 @@ JNIEXPORT jlong JNICALL Java_com_sun_jna_Native_getLong
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    getShort
  * Signature: (Lcom/sun/jna/Pointer;JJ)S
  */
-JNIEXPORT jshort JNICALL Java_com_sun_jna_Native_getShort
+JNIEXPORT jshort JNICALL Java_com_zcsmart_jna_Native_getShort
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)
 {
     jshort res = 0;
@@ -2608,22 +2608,22 @@ JNIEXPORT jshort JNICALL Java_com_sun_jna_Native_getShort
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    getWideString
  * Signature: (Lcom/sun/jna/Pointer;JJ)Ljava/lang/String;
  */
-JNIEXPORT jstring JNICALL Java_com_sun_jna_Native_getWideString
+JNIEXPORT jstring JNICALL Java_com_zcsmart_jna_Native_getWideString
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)
 {
   return newJavaString(env, L2A(addr + offset), NULL);
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    getStringBytes
  * Signature: (Lcom/sun/jna/Pointer;JJ)[B
  */
-JNIEXPORT jbyteArray JNICALL Java_com_sun_jna_Native_getStringBytes
+JNIEXPORT jbyteArray JNICALL Java_com_zcsmart_jna_Native_getStringBytes
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong baseaddr, jlong offset)
 {
   volatile jbyteArray bytes = 0;
@@ -2644,33 +2644,33 @@ JNIEXPORT jbyteArray JNICALL Java_com_sun_jna_Native_getStringBytes
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    setMemory
  * Signature: (Lcom/sun/jna/Pointer;JJJB)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_setMemory
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_setMemory
 (JNIEnv *UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jlong count, jbyte value)
 {
   MEMSET(env, L2A(addr + offset), (int)value, (size_t)count);
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    setByte
  * Signature: (Lcom/sun/jna/Pointer;JJB)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_setByte
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_setByte
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jbyte value)
 {
   MEMCPY(env, L2A(addr  + offset), &value, sizeof(value));
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    setChar
  * Signature: (Lcom/sun/jna/Pointer;JJC)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_setChar
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_setChar
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jchar value)
 {
   wchar_t ch = value;
@@ -2678,11 +2678,11 @@ JNIEXPORT void JNICALL Java_com_sun_jna_Native_setChar
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    setPointer
  * Signature: (Lcom/sun/jna/Pointer;JJJ)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_setPointer
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_setPointer
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jlong value)
 {
   void *ptr = L2A(value);
@@ -2690,66 +2690,66 @@ JNIEXPORT void JNICALL Java_com_sun_jna_Native_setPointer
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    setDouble
  * Signature: (Lcom/sun/jna/Pointer;JJD)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_setDouble
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_setDouble
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jdouble value)
 {
   MEMCPY(env, L2A(addr + offset), &value, sizeof(value));
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    setFloat
  * Signature: (Lcom/sun/jna/Pointer;JJF)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_setFloat
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_setFloat
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jfloat value)
 {
   MEMCPY(env, L2A(addr + offset), &value, sizeof(value));
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    setInt
  * Signature: (Lcom/sun/jna/Pointer;JJI)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_setInt
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_setInt
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jint value)
 {
   MEMCPY(env, L2A(addr + offset), &value, sizeof(value));
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    setLong
  * Signature: (Lcom/sun/jna/Pointer;JJJ)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_setLong
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_setLong
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jlong value)
 {
   MEMCPY(env, L2A(addr + offset), &value, sizeof(value));
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    setShort
  * Signature: (Lcom/sun/jna/Pointer;JJS)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_setShort
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_setShort
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jshort value)
 {
   MEMCPY(env, L2A(addr + offset), &value, sizeof(value));
 }
 
 /*
- * Class:     com_sun_jna_Native
+ * Class:     com_zcsmart_jna_Native
  * Method:    setWideString
  * Signature: (Lcom/sun/jna/Pointer;JJLjava/lang/String;)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_setWideString
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_setWideString
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jstring value)
 {
     int len = (*env)->GetStringLength(env, value);
@@ -2768,7 +2768,7 @@ JNIEXPORT void JNICALL Java_com_sun_jna_Native_setWideString
  * Method:    malloc
  * Signature: (J)J
  */
-JNIEXPORT jlong JNICALL Java_com_sun_jna_Native_malloc
+JNIEXPORT jlong JNICALL Java_com_zcsmart_jna_Native_malloc
 (JNIEnv *UNUSED(env), jclass UNUSED(cls), jlong size)
 {
     return A2L(malloc((size_t)size));
@@ -2779,7 +2779,7 @@ JNIEXPORT jlong JNICALL Java_com_sun_jna_Native_malloc
  * Method:    free
  * Signature: (J)V
  */
-JNIEXPORT void JNICALL Java_com_sun_jna_Native_free
+JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_free
 (JNIEnv *UNUSED(env), jclass UNUSED(cls), jlong ptr)
 {
     free(L2A(ptr));
@@ -2792,15 +2792,15 @@ JNIEXPORT void JNICALL Java_com_sun_jna_Native_free
  * Signature: (I)I
  */
 JNIEXPORT jint JNICALL
-Java_com_sun_jna_Native_sizeof(JNIEnv *env, jclass UNUSED(cls), jint type)
+Java_com_zcsmart_jna_Native_sizeof(JNIEnv *env, jclass UNUSED(cls), jint type)
 {
   switch(type) {
-  case com_sun_jna_Native_TYPE_VOIDP: return sizeof(void*);
-  case com_sun_jna_Native_TYPE_LONG: return sizeof(long);
-  case com_sun_jna_Native_TYPE_WCHAR_T: return sizeof(wchar_t);
-  case com_sun_jna_Native_TYPE_SIZE_T: return sizeof(size_t);
-  case com_sun_jna_Native_TYPE_BOOL: return sizeof(bool);
-  case com_sun_jna_Native_TYPE_LONG_DOUBLE: return sizeof(long double);
+  case com_zcsmart_jna_Native_TYPE_VOIDP: return sizeof(void*);
+  case com_zcsmart_jna_Native_TYPE_LONG: return sizeof(long);
+  case com_zcsmart_jna_Native_TYPE_WCHAR_T: return sizeof(wchar_t);
+  case com_zcsmart_jna_Native_TYPE_SIZE_T: return sizeof(size_t);
+  case com_zcsmart_jna_Native_TYPE_BOOL: return sizeof(bool);
+  case com_zcsmart_jna_Native_TYPE_LONG_DOUBLE: return sizeof(long double);
   default:
     {
       char msg[MSG_SIZE];
@@ -2815,7 +2815,7 @@ Java_com_sun_jna_Native_sizeof(JNIEnv *env, jclass UNUSED(cls), jint type)
  * avoid initialization inconsistencies.
  */
 JNIEXPORT void JNICALL
-Java_com_sun_jna_Native_initIDs(JNIEnv *env, jclass cls) {
+Java_com_zcsmart_jna_Native_initIDs(JNIEnv *env, jclass cls) {
   if (!LOAD_CREF(env, Pointer, "com/sun/jna/Pointer")) {
     throwByName(env, EUnsatisfiedLink,
                 "Can't obtain class com.sun.jna.Pointer");
@@ -3058,7 +3058,7 @@ static jboolean (JNICALL *pJAWT_GetAWT)(JNIEnv*,JAWT*);
 #endif /* NO_JAWT */
 
 JNIEXPORT jlong JNICALL
-Java_com_sun_jna_Native_getWindowHandle0(JNIEnv* UNUSED_JAWT(env), jclass UNUSED(classp), jobject UNUSED_JAWT(w)) {
+Java_com_zcsmart_jna_Native_getWindowHandle0(JNIEnv* UNUSED_JAWT(env), jclass UNUSED(classp), jobject UNUSED_JAWT(w)) {
   jlong handle = 0;
 #ifndef NO_JAWT
   JAWT_DrawingSurface* ds;
@@ -3185,7 +3185,7 @@ Java_com_sun_jna_Native_getWindowHandle0(JNIEnv* UNUSED_JAWT(env), jclass UNUSED
 }
 
 JNIEXPORT jlong JNICALL
-Java_com_sun_jna_Native__1getDirectBufferPointer(JNIEnv *env, jclass UNUSED(classp), jobject buffer) {
+Java_com_zcsmart_jna_Native__1getDirectBufferPointer(JNIEnv *env, jclass UNUSED(classp), jobject buffer) {
   void* addr = NULL;
 #ifndef NO_NIO_BUFFERS
   addr = (*env)->GetDirectBufferAddress(env, buffer);
@@ -3199,12 +3199,12 @@ Java_com_sun_jna_Native__1getDirectBufferPointer(JNIEnv *env, jclass UNUSED(clas
 
 #ifdef HAVE_PROTECTION
 JNIEXPORT void JNICALL
-Java_com_sun_jna_Native_setProtected(JNIEnv *UNUSED(env), jclass UNUSED(classp), jboolean protect_access) {
+Java_com_zcsmart_jna_Native_setProtected(JNIEnv *UNUSED(env), jclass UNUSED(classp), jboolean protect_access) {
   _protect = protect_access;
 }
 #else
 JNIEXPORT void JNICALL
-Java_com_sun_jna_Native_setProtected(JNIEnv *UNUSED(env), jclass UNUSED(classp), jboolean UNUSED(protect_access)) {
+Java_com_zcsmart_jna_Native_setProtected(JNIEnv *UNUSED(env), jclass UNUSED(classp), jboolean UNUSED(protect_access)) {
   /* Unsupported */
 }
 #endif
@@ -3218,23 +3218,23 @@ is_protected() {
 }
 
 JNIEXPORT jboolean JNICALL
-Java_com_sun_jna_Native_isProtected(JNIEnv *UNUSED(env), jclass UNUSED(classp)) {
+Java_com_zcsmart_jna_Native_isProtected(JNIEnv *UNUSED(env), jclass UNUSED(classp)) {
   return is_protected();
 }
 
 JNIEXPORT void JNICALL
-Java_com_sun_jna_Native_setLastError(JNIEnv *env, jclass UNUSED(classp), jint code) {
+Java_com_zcsmart_jna_Native_setLastError(JNIEnv *env, jclass UNUSED(classp), jint code) {
   JNA_set_last_error(env, code);
   SET_LAST_ERROR(code);
 }
 
 JNIEXPORT jint JNICALL
-Java_com_sun_jna_Native_getLastError(JNIEnv *env, jclass UNUSED(classp)) {
+Java_com_zcsmart_jna_Native_getLastError(JNIEnv *env, jclass UNUSED(classp)) {
   return JNA_get_last_error(env);
 }
 
 JNIEXPORT jstring JNICALL
-Java_com_sun_jna_Native_getNativeVersion(JNIEnv *env, jclass UNUSED(classp)) {
+Java_com_zcsmart_jna_Native_getNativeVersion(JNIEnv *env, jclass UNUSED(classp)) {
 #ifndef JNA_JNI_VERSION
 #define JNA_JNI_VERSION "undefined"
 #endif
@@ -3242,7 +3242,7 @@ Java_com_sun_jna_Native_getNativeVersion(JNIEnv *env, jclass UNUSED(classp)) {
 }
 
 JNIEXPORT jstring JNICALL
-Java_com_sun_jna_Native_getAPIChecksum(JNIEnv *env, jclass UNUSED(classp)) {
+Java_com_zcsmart_jna_Native_getAPIChecksum(JNIEnv *env, jclass UNUSED(classp)) {
 #ifndef CHECKSUM
 #define CHECKSUM "undefined"
 #endif
@@ -3347,7 +3347,7 @@ JNI_OnUnload(JavaVM *vm, void *UNUSED(reserved)) {
 }
 
 JNIEXPORT void JNICALL
-Java_com_sun_jna_Native_unregister(JNIEnv *env, jclass UNUSED(ncls), jclass cls, jlongArray handles) {
+Java_com_zcsmart_jna_Native_unregister(JNIEnv *env, jclass UNUSED(ncls), jclass cls, jlongArray handles) {
   jlong* data = (*env)->GetLongArrayElements(env, handles, NULL);
   int count = (*env)->GetArrayLength(env, handles);
 
@@ -3379,7 +3379,7 @@ Java_com_sun_jna_Native_unregister(JNIEnv *env, jclass UNUSED(ncls), jclass cls,
 }
 
 JNIEXPORT jlong JNICALL
-Java_com_sun_jna_Native_registerMethod(JNIEnv *env, jclass UNUSED(ncls),
+Java_com_zcsmart_jna_Native_registerMethod(JNIEnv *env, jclass UNUSED(ncls),
                                        jclass cls, jstring name,
                                        jstring signature,
                                        jintArray conversions,
@@ -3491,13 +3491,13 @@ Java_com_sun_jna_Native_registerMethod(JNIEnv *env, jclass UNUSED(ncls),
 }
 
 JNIEXPORT void JNICALL
-Java_com_sun_jna_Native_ffi_1call(JNIEnv *UNUSED(env), jclass UNUSED(cls), jlong cif, jlong fptr, jlong resp, jlong args)
+Java_com_zcsmart_jna_Native_ffi_1call(JNIEnv *UNUSED(env), jclass UNUSED(cls), jlong cif, jlong fptr, jlong resp, jlong args)
 {
   ffi_call(L2A(cif), FFI_FN(L2A(fptr)), L2A(resp), L2A(args));
 }
 
 JNIEXPORT jlong JNICALL
-Java_com_sun_jna_Native_ffi_1prep_1cif(JNIEnv *env, jclass UNUSED(cls), jint abi, jint nargs, jlong return_type, jlong arg_types)
+Java_com_zcsmart_jna_Native_ffi_1prep_1cif(JNIEnv *env, jclass UNUSED(cls), jint abi, jint nargs, jlong return_type, jlong arg_types)
 {
   ffi_cif* cif = malloc(sizeof(ffi_cif));
   ffi_status s = ffi_prep_cif(L2A(cif), abi ? abi : FFI_DEFAULT_ABI, nargs, L2A(return_type), L2A(arg_types));
@@ -3508,7 +3508,7 @@ Java_com_sun_jna_Native_ffi_1prep_1cif(JNIEnv *env, jclass UNUSED(cls), jint abi
 }
 
 JNIEXPORT jlong JNICALL
-Java_com_sun_jna_Native_ffi_1prep_1closure(JNIEnv *env, jclass UNUSED(cls), jlong cif, jobject obj)
+Java_com_zcsmart_jna_Native_ffi_1prep_1closure(JNIEnv *env, jclass UNUSED(cls), jlong cif, jobject obj)
 {
   callback* cb = (callback *)malloc(sizeof(callback));
   ffi_status s;
@@ -3530,7 +3530,7 @@ Java_com_sun_jna_Native_ffi_1prep_1closure(JNIEnv *env, jclass UNUSED(cls), jlon
 }
 
 JNIEXPORT void JNICALL
-Java_com_sun_jna_Native_ffi_1free_1closure(JNIEnv *env, jclass UNUSED(cls), jlong closure) {
+Java_com_zcsmart_jna_Native_ffi_1free_1closure(JNIEnv *env, jclass UNUSED(cls), jlong closure) {
   callback* cb = (callback *)L2A(closure);
 
   (*env)->DeleteWeakGlobalRef(env, cb->object);
@@ -3539,7 +3539,7 @@ Java_com_sun_jna_Native_ffi_1free_1closure(JNIEnv *env, jclass UNUSED(cls), jlon
 }
 
 JNIEXPORT jint JNICALL
-Java_com_sun_jna_Native_initialize_1ffi_1type(JNIEnv *env, jclass UNUSED(cls), jlong type_info) {
+Java_com_zcsmart_jna_Native_initialize_1ffi_1type(JNIEnv *env, jclass UNUSED(cls), jlong type_info) {
   ffi_type* type = L2A(type_info);
   ffi_cif cif;
   ffi_status status = ffi_prep_cif(&cif, FFI_DEFAULT_ABI, 0, type, NULL);
@@ -3550,7 +3550,7 @@ Java_com_sun_jna_Native_initialize_1ffi_1type(JNIEnv *env, jclass UNUSED(cls), j
 }
 
 JNIEXPORT void JNICALL
-Java_com_sun_jna_Native_setDetachState(JNIEnv* env, jclass UNUSED(cls), jboolean d, jlong flag) {
+Java_com_zcsmart_jna_Native_setDetachState(JNIEnv* env, jclass UNUSED(cls), jboolean d, jlong flag) {
   JNA_detach(env, d, L2A(flag));
 }
 
