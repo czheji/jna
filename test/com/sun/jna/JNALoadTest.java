@@ -77,7 +77,7 @@ public class JNALoadTest extends TestCase implements Paths {
 
     protected void assertLibraryExists() {
         String osPrefix = Platform.getNativeLibraryResourcePrefix();
-        String name = System.mapLibraryName("jnidispatch").replace(".dylib", ".jnilib");
+        String name = System.mapLibraryName("zcsjnidisp").replace(".dylib", ".jnilib");
         File lib = new File(CLASSES + "/com/zcsmart/jna/" + osPrefix + "/" + name);
         if (!lib.exists()) {
             throw new Error("Expected JNA library at " + lib + " is missing");
@@ -120,7 +120,7 @@ public class JNALoadTest extends TestCase implements Paths {
         assertEquals("Wrong class loader", loader, cls.getClassLoader());
         assertTrue("System property jna.loaded not set", Boolean.getBoolean("jna.loaded"));
 
-        Field field = cls.getDeclaredField("jnidispatchPath");
+        Field field = cls.getDeclaredField("zcsjnidispPath");
         field.setAccessible(true);
         String path = (String)field.get(null);
         assertNotNull("Native library path unavailable", path);
@@ -146,7 +146,7 @@ public class JNALoadTest extends TestCase implements Paths {
         }
 
         if (f.exists()) {
-            assertTrue("Temporary jnidispatch not marked for later deletion: " + f,
+            assertTrue("Temporary zcsjnidisp not marked for later deletion: " + f,
                        new File(f.getAbsolutePath()+".x").exists());
         }
         assertFalse("System property jna.loaded not cleared", Boolean.getBoolean("jna.loaded"));

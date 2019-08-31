@@ -59,7 +59,7 @@ JAVA_INCLUDES=-I"$(JAVA_HOME)/include" \
 BUILD=../build/native
 JAVAH=$(BUILD)
 INSTALLDIR=../build/$(OS)
-JNIDISPATCH_OBJS=$(BUILD)/dispatch.o $(BUILD)/callback.o $(EXTRAOBJS)
+ZCSJNIDISP_OBJS=$(BUILD)/dispatch.o $(BUILD)/callback.o $(EXTRAOBJS)
 RSRC=$(BUILD)/rsrc.o
 DLLCB=$(BUILD)/dll-callback.o
 ifneq ($(DYNAMIC_LIBFFI),true)
@@ -455,8 +455,8 @@ $(RSRC): $(BUILD)/zcsjnidisp.rc $(BUILD)/$(JNA_JNI_VERSION).stamp
 $(BUILD)/$(JNA_JNI_VERSION).stamp:
 	@touch $@
 
-$(LIBRARY): $(JNIDISPATCH_OBJS) $(FFI_LIB)
-	$(LD) $(LDFLAGS) $(JNIDISPATCH_OBJS) $(FFI_LIB) $(LIBS)
+$(LIBRARY): $(ZCSJNIDISP_OBJS) $(FFI_LIB)
+	$(LD) $(LDFLAGS) $(ZCSJNIDISP_OBJS) $(FFI_LIB) $(LIBS)
 	$(STRIP) $@
 
 $(TESTLIB): $(BUILD)/testlib.o

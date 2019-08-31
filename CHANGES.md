@@ -57,7 +57,7 @@ Bug Fixes
 ---------
 * [#1052](https://github.com/java-native-access/jna/pull/1052), [#1053](https://github.com/java-native-access/jna/issues/1053): WinXP compatibility for `c.s.j.p.win32.PdhUtil` - [@dbwiddis](https://github.com/dbwiddis).
 * [#1055](https://github.com/java-native-access/jna/pull/1055): Include `c.s.j.p.linux` in OSGi bundle. - [@dbwiddis](https://github.com/dbwiddis).
-* [#1066](https://github.com/java-native-access/jna/issues/1066): On AIX OpenJDK differs from IBM J9 in the mapping of library names. While J9 maps jnidispatch to `libjnidispatch.a`, OpenJDK maps to `libjnidispatch.so`, which causes the native library extractor to fail. AIX is now hard-coded to `libjnidispatch.a` - [@matthiasblaesing](https://github.com/matthiasblaesing).
+* [#1066](https://github.com/java-native-access/jna/issues/1066): On AIX OpenJDK differs from IBM J9 in the mapping of library names. While J9 maps zcsjnidisp to `libzcsjnidisp.a`, OpenJDK maps to `libzcsjnidisp.so`, which causes the native library extractor to fail. AIX is now hard-coded to `libzcsjnidisp.a` - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#1079](https://github.com/java-native-access/jna/issues/1079): Fix maximum structure alignment for Android i386 - [@BugsBeGone](https://github.com/BugsBeGone).
 
 Release 5.2.0
@@ -580,7 +580,7 @@ Bug Fixes
 ---------
 * Fix `Advapi32Util.registryGetValues()` tried to allocate memory for a zero-length `REG_BINARY` value - [@phailwhale22](https://github.com/phailwhale22).
 * Fix crash in direct mode callbacks with certain type conversions - [@twall](https://github.com/twall).
-* More thoroughly propagate unexpected exceptions generated in jnidispatch - [@twall](https://github.com/twall).
+* More thoroughly propagate unexpected exceptions generated in zcsjnidisp - [@twall](https://github.com/twall).
 * Cleanup maven poms and publishing to central repo - [@bhamail](https://github.com/bhamail).
 * [#129](https://github.com/java-native-access/jna/issues/129): Allow `Memory` field in structure - [@twall](https://github.com/twall).
 * Preserve `PointerType` fields on `Structure.read()` if unchanged - [@twall](https://github.com/twall).
@@ -641,9 +641,9 @@ Release 3.4.0
 Features
 --------
 * Provide `jna.nosys=true` to avoid loading any system-provided JNA (useful for local build/development).
-* Allow override of default jnidispatch library name with `jna.boot.library.name` system property.
+* Allow override of default zcsjnidisp library name with `jna.boot.library.name` system property.
 * Throw an Error if a system install of JNA is incompatible or if JNA's JNI library does not match.
-* Disable automatic jnidispatch unpacking with `jna.nounpack=true`.
+* Disable automatic zcsjnidisp unpacking with `jna.nounpack=true`.
 * Automatically look up system error messages for LastErrorException.
 * Improved callback thread-mapping support; re-use, rename, and group callback
 threads.

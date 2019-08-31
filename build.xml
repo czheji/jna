@@ -69,7 +69,7 @@
     </or>
   </condition>
   <property name="jna.version" value="${jna.major}.${jna.minor}.${jna.revision}${version.suffix}"/>
-  <!-- jnidispatch library release version -->
+  <!-- zcsjnidisp library release version -->
   <property name="jni.major" value="6"/>
   <property name="jni.minor" value="1"/>
   <property name="jni.revision" value="0"/>
@@ -222,7 +222,7 @@
                    replace='VERSION_NATIVE = "${jni.version}";'
                    file="src/com/zcsmart/jna/Version.java"/>
 
-    <condition property="jar.omitted" value="**/*jnidispatch*" else="jnilib-included">
+    <condition property="jar.omitted" value="**/*zcsjnidisp*" else="jnilib-included">
       <isset property="omit-jnilib"/>
     </condition>
     <condition property="cross-compile" value="true">
@@ -438,66 +438,66 @@
           -->
         <attribute name="Bundle-NativeCode"
                    value="
-com/sun/jna/win32-x86/jnidispatch.dll;
+com/sun/jna/win32-x86/zcsjnidisp.dll;
 processor=x86;osname=win32,
-com/sun/jna/win32-x86-64/jnidispatch.dll;
+com/sun/jna/win32-x86-64/zcsjnidisp.dll;
 processor=x86-64;osname=win32,
-com/sun/jna/win32-x86/jnidispatch.dll;
+com/sun/jna/win32-x86/zcsjnidisp.dll;
 processor=x86;osname=win,
-com/sun/jna/win32-x86-64/jnidispatch.dll;
+com/sun/jna/win32-x86-64/zcsjnidisp.dll;
 processor=x86-64;osname=win,
-com/sun/jna/w32ce-arm/jnidispatch.dll;
+com/sun/jna/w32ce-arm/zcsjnidisp.dll;
 processor=arm;osname=wince,
 
-com/sun/jna/sunos-x86/libjnidispatch.so;
+com/sun/jna/sunos-x86/libzcsjnidisp.so;
 processor=x86;osname=sunos,
-com/sun/jna/sunos-x86-64/libjnidispatch.so;
+com/sun/jna/sunos-x86-64/libzcsjnidisp.so;
 processor=x86-64;osname=sunos,
-com/sun/jna/sunos-sparc/libjnidispatch.so;
+com/sun/jna/sunos-sparc/libzcsjnidisp.so;
 processor=sparc;osname=sunos,
-com/sun/jna/sunos-sparcv9/libjnidispatch.so;
+com/sun/jna/sunos-sparcv9/libzcsjnidisp.so;
 processor=sparcv9;osname=sunos,
 
-com/sun/jna/aix-ppc/libjnidispatch.a;
+com/sun/jna/aix-ppc/libzcsjnidisp.a;
 processor=ppc;osname=aix,
-com/sun/jna/aix-ppc64/libjnidispatch.a;
+com/sun/jna/aix-ppc64/libzcsjnidisp.a;
 processor=ppc64;osname=aix,
 
-com/sun/jna/linux-ppc/libjnidispatch.so;
+com/sun/jna/linux-ppc/libzcsjnidisp.so;
 processor=ppc;osname=linux,
-com/sun/jna/linux-ppc64/libjnidispatch.so;
+com/sun/jna/linux-ppc64/libzcsjnidisp.so;
 processor=ppc64;osname=linux,
-com/sun/jna/linux-ppc64le/libjnidispatch.so;
+com/sun/jna/linux-ppc64le/libzcsjnidisp.so;
 processor=ppc64le;osname=linux,
-com/sun/jna/linux-x86/libjnidispatch.so;
+com/sun/jna/linux-x86/libzcsjnidisp.so;
 processor=x86;osname=linux,
-com/sun/jna/linux-x86-64/libjnidispatch.so;
+com/sun/jna/linux-x86-64/libzcsjnidisp.so;
 processor=x86-64;osname=linux,
-com/sun/jna/linux-arm/libjnidispatch.so;
+com/sun/jna/linux-arm/libzcsjnidisp.so;
 processor=arm;osname=linux,
-com/sun/jna/linux-armel/libjnidispatch.so;
+com/sun/jna/linux-armel/libzcsjnidisp.so;
 processor=armel;osname=linux,
-com/sun/jna/linux-aarch64/libjnidispatch.so;
+com/sun/jna/linux-aarch64/libzcsjnidisp.so;
 processor=aarch64;osname=linux,
-com/sun/jna/linux-ia64/libjnidispatch.so;
+com/sun/jna/linux-ia64/libzcsjnidisp.so;
 processor=ia64;osname=linux,
-com/sun/jna/linux-sparcv9/libjnidispatch.so;
+com/sun/jna/linux-sparcv9/libzcsjnidisp.so;
 processor=sparcv9;osname=linux,
-com/sun/jna/linux-mips64el/libjnidispatch.so;
+com/sun/jna/linux-mips64el/libzcsjnidisp.so;
 processor=mips64el;osname=linux,
-com/sun/jna/linux-s390x/libjnidispatch.so;
+com/sun/jna/linux-s390x/libzcsjnidisp.so;
 processor=S390x;osname=linux,
 
-com/sun/jna/freebsd-x86/libjnidispatch.so;
+com/sun/jna/freebsd-x86/libzcsjnidisp.so;
 processor=x86;osname=freebsd,
-com/sun/jna/freebsd-x86-64/libjnidispatch.so;
+com/sun/jna/freebsd-x86-64/libzcsjnidisp.so;
 processor=x86-64;osname=freebsd,
-com/sun/jna/openbsd-x86/libjnidispatch.so;
+com/sun/jna/openbsd-x86/libzcsjnidisp.so;
 processor=x86;osname=openbsd,
-com/sun/jna/openbsd-x86-64/libjnidispatch.so;
+com/sun/jna/openbsd-x86-64/libzcsjnidisp.so;
 processor=x86-64;osname=openbsd,
 
-com/sun/jna/darwin/libjnidispatch.jnilib;
+com/sun/jna/darwin/libzcsjnidisp.jnilib;
 osname=macosx;processor=x86;processor=x86-64;processor=ppc
 "/>
       </manifest>
@@ -505,89 +505,89 @@ osname=macosx;processor=x86;processor=x86-64;processor=ppc
         <patternset refid="jar-compiled"/>
       </fileset>
       <zipfileset src="${lib.native}/win32-x86.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/win32-x86"/>
       <zipfileset src="${lib.native}/aix-ppc.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/aix-ppc"/>
       <zipfileset src="${lib.native}/aix-ppc64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/aix-ppc64"/>
       <zipfileset src="${lib.native}/darwin.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/darwin"/>
       <zipfileset src="${lib.native}/linux-x86.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-x86"/>
       <zipfileset src="${lib.native}/linux-x86-64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-x86-64"/>
       <zipfileset src="${lib.native}/linux-arm.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-arm"/>
       <zipfileset src="${lib.native}/linux-armel.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-armel"/>
       <zipfileset src="${lib.native}/linux-aarch64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-aarch64"/>
       <zipfileset src="${lib.native}/linux-ia64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-ia64"/>
       <zipfileset src="${lib.native}/linux-ppc.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-ppc"/>
       <zipfileset src="${lib.native}/linux-ppc64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-ppc64"/>
       <zipfileset src="${lib.native}/linux-ppc64le.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-ppc64le"/>
       <zipfileset src="${lib.native}/linux-sparcv9.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-sparcv9"/>
       <zipfileset src="${lib.native}/linux-mips64el.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-mips64el"/>
       <zipfileset src="${lib.native}/linux-s390x.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/linux-s390x"/>
       <zipfileset src="${lib.native}/sunos-x86.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/sunos-x86"/>
       <zipfileset src="${lib.native}/sunos-x86-64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/sunos-x86-64"/>
       <zipfileset src="${lib.native}/sunos-sparc.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/sunos-sparc"/>
       <zipfileset src="${lib.native}/sunos-sparcv9.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/sunos-sparcv9"/>
       <zipfileset src="${lib.native}/freebsd-x86.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/freebsd-x86"/>
       <zipfileset src="${lib.native}/freebsd-x86-64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/freebsd-x86-64"/>
       <zipfileset src="${lib.native}/openbsd-x86.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/openbsd-x86"/>
       <zipfileset src="${lib.native}/openbsd-x86-64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/openbsd-x86-64"/>
       <zipfileset src="${lib.native}/win32-x86-64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/win32-x86-64"/>
       <zipfileset src="${lib.native}/w32ce-arm.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="com/sun/jna/w32ce-arm"/>
       <zipfileset dir="."
                   includes="LICENSE,LGPL2.1,AL2.0"
                   prefix="META-INF"/>
     </jar>
     <zip zipfile="${build}/${minjar}">
-      <zipfileset src="${build}/${jar}" excludes="**/*jnidispatch*"/>
+      <zipfileset src="${build}/${jar}" excludes="**/*zcsjnidisp*"/>
     </zip>
   </target>
 
@@ -617,25 +617,25 @@ osname=macosx;processor=x86;processor=x86-64;processor=ppc
           <globmapper from="*" to="classes.jar"/>
         </mappedresources>
         <zipfileset src="${lib.native}/android-aarch64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="jni/arm64-v8a"/>
         <zipfileset src="${lib.native}/android-arm.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="jni/armeabi"/>
         <zipfileset src="${lib.native}/android-armv7.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="jni/armeabi-v7a"/>
         <zipfileset src="${lib.native}/android-mips.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="jni/mips"/>
         <zipfileset src="${lib.native}/android-mips64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="jni/mips64"/>
         <zipfileset src="${lib.native}/android-x86-64.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="jni/x86_64"/>
         <zipfileset src="${lib.native}/android-x86.jar"
-                  includes="*jnidispatch*"
+                  includes="*zcsjnidisp*"
                   prefix="jni/x86"/>
         <fileset dir="${build.aar}"/>
     </zip>
@@ -761,7 +761,7 @@ osname=macosx;processor=x86;processor=x86-64;processor=ppc
     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/android-mips.jar" overwrite="true"/>
     <copy file="${lib.native}/out-of-date.jar" tofile="${lib.native}/android-mips64.jar" overwrite="true"/>
     <delete failOnError="false" includeEmptyDirs="true">
-      <fileset dir="${build.native}" includes="*.o,*jnidispatch*"/>
+      <fileset dir="${build.native}" includes="*.o,*zcsjnidisp*"/>
     </delete>
     <fail>API for native code has changed, or javah output is inconsistent.  Re-run this build after checking ${md5.file} or updating jni.version and jni.md5 in build.xml</fail>
   </target>
@@ -776,8 +776,8 @@ osname=macosx;processor=x86;processor=x86-64;processor=ppc
   </target>
   <target name="rsrc" depends="-setup,:rsrc" unless="-rsrc"
           description="Generate w32 DLL version resource information">
-    <property name="rsrc" location="${build.native}/jnidispatch.rc"/>
-    <copy todir="${build.native}" file="${native}/jnidispatch.rc"/>
+    <property name="rsrc" location="${build.native}/zcsjnidisp.rc"/>
+    <copy todir="${build.native}" file="${native}/zcsjnidisp.rc"/>
     <replaceregexp match="FILEVERSION.*"
                    replace="FILEVERSION ${jni.major},${jni.minor},${jni.revision},${jni.build}"
                    preserveLastModified="true"
@@ -962,7 +962,7 @@ ${make}\
  CHECKSUM=${jni.md5}
 cd ..
 cd build
-zip ../${os.prefix}.jar libjnidispatch.so jnidispatch.dll
+zip ../${os.prefix}.jar libzcsjnidisp.so zcsjnidisp.dll
 cd ..
     </echo>
     <jar jarfile="${build}/${os.prefix}.jar">
@@ -1018,18 +1018,18 @@ cd ..
     <mkdir dir="${classes}/${native.path}"/>
     <copy todir="${classes}/${native.path}">
       <fileset dir="${build.native}"
-               includes="jnidispatch.dll,libjnidispatch.*"/>
+               includes="zcsjnidisp.dll,libzcsjnidisp.*"/>
     </copy>
     <mkdir dir="${eclipse.classes}/${native.path}"/>
     <copy todir="${eclipse.classes}/${native.path}"
           failonerror="false">
       <fileset dir="${build.native}"
-               includes="jnidispatch.dll,libjnidispatch.*"/>
+               includes="zcsjnidisp.dll,libzcsjnidisp.*"/>
     </copy>
     <!-- For web start, native libraries may be provided in the root of -->
     <!-- an included jar file -->
     <jar jarfile="${build}/${native.jar}">
-      <fileset dir="${build.native}" includes="jnidispatch.dll,libjnidispatch.*"/>
+      <fileset dir="${build.native}" includes="zcsjnidisp.dll,libzcsjnidisp.*"/>
       <manifest>
         <attribute name="Implementation-Version" value="${jni.version} b${jni.build}"/>
         <attribute name="Specification-Version" value="${jni.version}"/>
@@ -1111,15 +1111,15 @@ cd ..
     <copy todir="${build}/jws" file="${build}/${testjar}"/>
     <copy todir="${build}/jws" file="lib/junit.jar"/>
     <copy todir="${build}/jws" file="lib/clover.jar"/>
-    <jar jarfile="${build}/jws/jnidispatch.jar">
-      <fileset dir="${build.native}" includes="*jnidispatch.*"/>
+    <jar jarfile="${build}/jws/zcsjnidisp.jar">
+      <fileset dir="${build.native}" includes="*zcsjnidisp.*"/>
     </jar>
     <!-- To allow JNLP tests to run, import the JNA testing certificate as a CA -->
     <!-- keytool -exportcert -file jna.csr -keystore jna.keystore -alias jna -->
     <!-- javaws -viewer (security tab, import CSR as CA-->
     <!--
     <signjar alias="jna" keystore="jna.keystore" storepass="jnadev" lazy="true">
-      <fileset dir="${build}/jws" includes="${jar},${testjar},junit.jar,jnidispatch.jar,clover.jar"/>
+      <fileset dir="${build}/jws" includes="${jar},${testjar},junit.jar,zcsjnidisp.jar,clover.jar"/>
     </signjar>
     -->
   </target>
@@ -1142,7 +1142,7 @@ cd ..
       <zipfileset src="${build}/${testjar}"/>
     </jar>
     <copy todir="${shared}" file="${build}/${jar}"/>
-    <copy todir="${shared}" file="${build.native}/jnidispatch.dll"/>
+    <copy todir="${shared}" file="${build.native}/zcsjnidisp.dll"/>
     <copy todir="${shared}" file="${build.native}/testlib.dll"/>
     <copy todir="${shared}" file="${build.native}/testlib2.dll"/>
     <copy todir="${shared}" file="${build.native}/test-path.dll"/>

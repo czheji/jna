@@ -872,7 +872,7 @@ public class NativeLibrary {
     }
 
     static {
-        String webstartPath = Native.getWebStartLibraryPath("jnidispatch");
+        String webstartPath = Native.getWebStartLibraryPath("zcsjnidisp");
         if (webstartPath != null) {
             librarySearchPath.add(webstartPath);
         }
