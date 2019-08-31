@@ -6,7 +6,7 @@
 
     <groupId>com.zcsmart</groupId>
     <artifactId>zcs-jna</artifactId>
-    <version>5.4.0</version>
+    <version>5.4.0-SNAPSHOTS</version>
     <packaging>jar</packaging>
 
     <name>Java Native Access</name>
