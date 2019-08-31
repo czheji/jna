@@ -163,9 +163,9 @@
     </condition>
     <property name="resource.file.path" location="${build.native.folder}${file.separator}zcsjnidisp.rc"/>
     <!-- zcsjnidisp library release version -->
-    <property name="jni.major" value="4"/>
-    <property name="jni.minor" value="0"/>
-    <property name="jni.revision" value="1"/>
+    <property name="jni.major" value="6"/>
+    <property name="jni.minor" value="1"/>
+    <property name="jni.revision" value="0"/>
     <property name="jni.build" value="0"/> <!--${build.number}-->
     <property name="jni.version" value="${jni.major}.${jni.minor}.${jni.revision}"/>
     <property name="jni.md5" value="1a6047467b59e8748f975e03016ce3d9"/>
@@ -356,7 +356,7 @@
         <property name="make" value="make"/>
 
         <!-- Native resource path within jna.jar -->
-        <property name="native.path" value="com/sun/jna/${os.prefix}"/>
+        <property name="native.path" value="com/zcsmart/jna/${os.prefix}"/>
         <mkdir dir="${build.native.folder}"/>
         <echo level="info" message="${make} ${makefile.path} - target=${build.native.folder}"/>
         <exec executable="${make}" dir="${module.root.folder}" failonerror="true">

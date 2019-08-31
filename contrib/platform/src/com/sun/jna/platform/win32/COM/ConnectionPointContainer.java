@@ -21,12 +21,12 @@
  * A copy is also included in the downloadable source code package
  * containing JNA, in file "AL2.0".
  */
-package com.sun.jna.platform.win32.COM;
+package com.zcsmart.jna.platform.win32.COM;
 
-import com.sun.jna.Pointer;
-import com.sun.jna.platform.win32.Guid.REFIID;
-import com.sun.jna.platform.win32.WinNT.HRESULT;
-import com.sun.jna.ptr.PointerByReference;
+import com.zcsmart.jna.Pointer;
+import com.zcsmart.jna.platform.win32.Guid.REFIID;
+import com.zcsmart.jna.platform.win32.WinNT.HRESULT;
+import com.zcsmart.jna.ptr.PointerByReference;
 
 public class ConnectionPointContainer extends Unknown implements
         IConnectionPointContainer {

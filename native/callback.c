@@ -344,17 +344,17 @@ free_callback(JNIEnv* env, callback *cb) {
 
 static int
 handle_exception(JNIEnv* env, jobject cb, jthrowable throwable) {
-#define HANDLER_TYPE "com/sun/jna/Callback$UncaughtExceptionHandler"
-#define HANDLER_SIG "Lcom/sun/jna/Callback$UncaughtExceptionHandler;"
+#define HANDLER_TYPE "com/zcsmart/jna/Callback$UncaughtExceptionHandler"
+#define HANDLER_SIG "Lcom/zcsmart/jna/Callback$UncaughtExceptionHandler;"
   jclass classHandler = (*env)->FindClass(env, HANDLER_TYPE);
   if (classHandler) {
-    jclass classNative = (*env)->FindClass(env, "com/sun/jna/Native");
+    jclass classNative = (*env)->FindClass(env, "com/zcsmart/jna/Native");
     if (classNative) {
       jfieldID fid = (*env)->GetStaticFieldID(env, classNative, "callbackExceptionHandler", HANDLER_SIG);
       if (fid) {
         jobject handler = (*env)->GetStaticObjectField(env, classNative, fid);
         if (handler) {
-          jmethodID mid = (*env)->GetMethodID(env, classHandler, "uncaughtException", "(Lcom/sun/jna/Callback;Ljava/lang/Throwable;)V");
+          jmethodID mid = (*env)->GetMethodID(env, classHandler, "uncaughtException", "(Lcom/zcsmart/jna/Callback;Ljava/lang/Throwable;)V");
           if (mid) {
             if (!(*env)->IsSameObject(env, handler, NULL)) {
               (*env)->CallVoidMethod(env, handler, mid, cb, throwable);

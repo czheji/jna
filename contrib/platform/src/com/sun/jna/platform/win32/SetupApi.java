@@ -20,20 +20,20 @@
  * A copy is also included in the downloadable source code package
  * containing JNA, in file "AL2.0".
  */
-package com.sun.jna.platform.win32;
+package com.zcsmart.jna.platform.win32;
 
 import java.util.List;
 
-import com.sun.jna.Native;
-import com.sun.jna.Pointer;
-import com.sun.jna.Structure;
-import com.sun.jna.Structure.FieldOrder;
-import com.sun.jna.platform.win32.Guid.GUID;
-import com.sun.jna.platform.win32.WinNT.HANDLE;
-import com.sun.jna.platform.win32.WinReg.HKEY;
-import com.sun.jna.ptr.IntByReference;
-import com.sun.jna.win32.StdCallLibrary;
-import com.sun.jna.win32.W32APIOptions;
+import com.zcsmart.jna.Native;
+import com.zcsmart.jna.Pointer;
+import com.zcsmart.jna.Structure;
+import com.zcsmart.jna.Structure.FieldOrder;
+import com.zcsmart.jna.platform.win32.Guid.GUID;
+import com.zcsmart.jna.platform.win32.WinNT.HANDLE;
+import com.zcsmart.jna.platform.win32.WinReg.HKEY;
+import com.zcsmart.jna.ptr.IntByReference;
+import com.zcsmart.jna.win32.StdCallLibrary;
+import com.zcsmart.jna.win32.W32APIOptions;
 
 /**
  * The interface for the w32 setup API.

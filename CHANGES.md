@@ -25,7 +25,7 @@ Features
 
 Bug Fixes
 ---------
-* [#1095](https://github.com/java-native-access/jna/pull/1095) Align behaviour of com.sun.jna.platform.macXAttrUtil#setXattr and #getXAttr with CLI tool - [@jrobhoward](https://github.com/jrobhoward), [@matthiasblaesing](https://github.com/matthiasblaesing).
+* [#1095](https://github.com/java-native-access/jna/pull/1095) Align behaviour of com.zcsmart.jna.platform.macXAttrUtil#setXattr and #getXAttr with CLI tool - [@jrobhoward](https://github.com/jrobhoward), [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#1091](https://github.com/java-native-access/jna/issues/1091): Check target number to be greater than zero, before calling `Structure#toArray` in `c.s.j.p.win32.Netapi32Util` - [@trevormagg](https://github.com/trevormaggs), [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#1103](https://github.com/java-native-access/jna/issues/1103): On big endian architecture IntegerType based values are incorrectly decoded when using direct binding - [@matthiasblaesing](https://github.com/matthiasblaesing).
 
@@ -84,7 +84,7 @@ Features
 --------
 * [#1029](https://github.com/java-native-access/jna/issues/1029): Add `statvfs` to `c.s.j.platform.linux.LibC` - [@dbwiddis](https://github.com/dbwiddis).
 * [#1032](https://github.com/java-native-access/jna/pull/1032): Deprecate `c.s.j.platform.win32.COM.util.annotation.ComEventCallback` in favour of `c.s.j.platform.win32.COM.util.annotation.ComMethod` - [@matthiasblaesing](https://github.com/matthiasblaesing).
-* [#1021](https://github.com/java-native-access/jna/pull/1021): Added `com.sun.jna.platform.linux.XAttr` and `com.sun.jna.platform.linux.XAttrUtil` JNA wrapper for `<sys/xattr.h>` for Linux - [@wilx](https://github.com/wilx).
+* [#1021](https://github.com/java-native-access/jna/pull/1021): Added `com.zcsmart.jna.platform.linux.XAttr` and `com.zcsmart.jna.platform.linux.XAttrUtil` JNA wrapper for `<sys/xattr.h>` for Linux - [@wilx](https://github.com/wilx).
 * [#381](https://github.com/java-native-access/jna/issues/381): Bind `c.s.j.p.win32.Secur32#CompleteAuthToken` - [@matthiasblaesing](https://github.com/matthiasblaesing).
 
 Bug Fixes
@@ -103,14 +103,14 @@ Features
 * [#903](https://github.com/java-native-access/jna/pull/903): Carry `HRESULT` in `c.s.j.p.win32.COM.COMException`, introduce `c.s.j.p.win32.COM.COMInvokeException` as subclass of `COMException` for exception as the result of a `IDispatch#Invoke`. The `EXECPINFO` is unwrapped into fields in the `COMInvokeException` and correctly freed. - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#822](https://github.com/java-native-access/jna/issues/822): `Native#loadLibrary` requires that the interface class passed in is an instance of Library. The runtime check can be enhanced by using a constraint generic. This breaks binary compatibility (see notes below) - [@d-noll](https://github.com/d-noll).<br /><br />In a followup, the original `loadLibrary` methods were deprecated and `Native#load` methods were introduced, that hold the new generic definitions. So this change is now binary compatible.
 * [#889](https://github.com/java-native-access/jna/issues/889): The `Structure#newInstance` receive the target type as a parameter. This adds a limited generic type, so that the return type ist the target type and not a generic structure, removing the necessity to do an explizit cast - [@matthiasblaesing](https://github.com/matthiasblaesing).
-* [#913](https://github.com/java-native-access/jna/issues/913): Add `@ComInterface` annotation to `com.sun.jna.platform.win32.COM.util.IConnectionPoint` to make it possible to retrieve it via `IUnknown#queryInterface` - [@matthiasblaesing](https://github.com/matthiasblaesing).
+* [#913](https://github.com/java-native-access/jna/issues/913): Add `@ComInterface` annotation to `com.zcsmart.jna.platform.win32.COM.util.IConnectionPoint` to make it possible to retrieve it via `IUnknown#queryInterface` - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#797](https://github.com/java-native-access/jna/issues/797): Binding `Advapi32#EnumDependendServices`, `Advapi32#EnumServicesStatusEx` and `Advapi32#QueryServiceStatus`. `W32Service#stopService` was modified to be more resilent when stopping service - [@matthiasblaesing](https://github.com/matthiasblaesing).
-* Bind `com.sun.jna.platform.win32.Kernel32.ExpandEnvironmentStrings` and add helper method for it as `Kernel32Util#expandEnvironmentStrings` - [@matthiasblaesing](https://github.com/matthiasblaesing).
+* Bind `com.zcsmart.jna.platform.win32.Kernel32.ExpandEnvironmentStrings` and add helper method for it as `Kernel32Util#expandEnvironmentStrings` - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#935](https://github.com/java-native-access/jna/pull/935): Add RegConnectRegistry to Advapi32 mappings. - [@cxcorp](https://github.com/cxcorp).
-* [#947](https://github.com/java-native-access/jna/pull/947):  Allow retrieval of `ACEs` from `com.sun.jna.platform.win32.WinNT.ACL` even if the contained `ACE` is not currently supported - [@jrobhoward](https://github.com/jrobhoward).
+* [#947](https://github.com/java-native-access/jna/pull/947):  Allow retrieval of `ACEs` from `com.zcsmart.jna.platform.win32.WinNT.ACL` even if the contained `ACE` is not currently supported - [@jrobhoward](https://github.com/jrobhoward).
 * [#954](https://github.com/java-native-access/jna/pull/954): Add `c.s.j.Structure.FieldOrder` annotation to define the field order of a structures without implementing `Structure#getFieldOrder()` - [@idosu](https://github.com/idosu).
-* [#959](https://github.com/java-native-access/jna/pull/959): Added `GetProcessTimes` and `GetProcessIoCounters` to `com.sun.jna.platform.win32.Kernel32` - [@dbwiddis](https://github.com/dbwiddis).
-* [#952](https://github.com/java-native-access/jna/issues/952): Added `CreateMutex`, `OpenMutex` and `ReleaseMutex` to `com.sun.jna.platform.win32.Kernel32` - [@matthiasblaesing](https://github.com/matthiasblaesing).
+* [#959](https://github.com/java-native-access/jna/pull/959): Added `GetProcessTimes` and `GetProcessIoCounters` to `com.zcsmart.jna.platform.win32.Kernel32` - [@dbwiddis](https://github.com/dbwiddis).
+* [#952](https://github.com/java-native-access/jna/issues/952): Added `CreateMutex`, `OpenMutex` and `ReleaseMutex` to `com.zcsmart.jna.platform.win32.Kernel32` - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#973](https://github.com/java-native-access/jna/issues/973): Added `PdhLookupPerfNameByIndex`, `PdhLookupPerfIndexByName`, and `PdhEnumObjectItems` to `c.s.j.platform.win32.Pdh` and a `c.s.j.platform.win32.PdhUtil` class to access them - [@dbwiddis](https://github.com/dbwiddis).
 * [#980](https://github.com/java-native-access/jna/issues/980): Added `PERF_OBJECT_TYPE`, `PERF_COUNTER_BLOCK`, and `PERF_COUNTER_DEFINITION` to `c.s.j.platform.win32.WinPerf` and added `Pointer` constructors to ``PERF_INSTANCE_DEFINITION` and `PERF_DATA_BLOCK` - [@dbwiddis](https://github.com/dbwiddis).
 * [#981](https://github.com/java-native-access/jna/issues/981): Added `WTS_PROCESS_INFO_EX`, `WTSEnumerateProcessesEx`, and `WTSFreeMemoryEx` to `c.s.j.platform.win32.Wtsapi32` - [@dbwiddis](https://github.com/dbwiddis).
@@ -126,19 +126,19 @@ Features
 * [#994](https://github.com/java-native-access/jna/issues/994): Added `CoInitializeSecurity` and `CoSetProxyBlanket` to `c.s.j.platform.win32.Ole32`, added new `c.s.j.platform.win32.Wbemcli` classes needed to query WMI, and added a `WbemcliUtil` class implementing WMI queries. - [@dbwiddis](https://github.com/dbwiddis).
 * [#1013](https://github.com/java-native-access/jna/pull/1013): Add automatic module name entries to manifest of jna and jna-platform - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#985](https://github.com/java-native-access/jna/issues/985): Improve handling of dynamicaly extracted native library. On Mac OS X systems `~/Library/Application Support/JNA/temp` and on other Unix like systems `$XDG_CACHE_DIR/JNA/temp` (Default value is: `~/.cache/JNA/temp`) is used - [@matthiasblaesing](https://github.com/matthiasblaesing).
-* Bind `com.sun.jna.platform.win32.Kernel32#ExitProcess` - [@Groostav](https://github.com/Groostav).
+* Bind `com.zcsmart.jna.platform.win32.Kernel32#ExitProcess` - [@Groostav](https://github.com/Groostav).
 
 Bug Fixes
 ---------
 * [#652](https://github.com/java-native-access/jna/issues/652): Dead Lock in class initialization - [@matthiasblaesing](https://github.com/matthiasblaesing).
-* [#843](https://github.com/java-native-access/jna/pull/843): Correctly bind `com.sun.jna.platform.win32.SecBufferDesc` and add convenience binding as `com.sun.jna.platform.win32.SspiUtil.ManagedSecBufferDesc`. Bind SSPI functions `InitializeSecurityContext`, `AcceptSecurityContext`, `QueryCredentialsAttributes`, `QuerySecurityPackageInfo`, `EncryptMessage`, `DecryptMessage`, `MakeSignature`, `VerifySignature` in `com.sun.jna.platform.win32.Secur32` - [@matthiasblaesing](https://github.com/matthiasblaesing).
+* [#843](https://github.com/java-native-access/jna/pull/843): Correctly bind `com.zcsmart.jna.platform.win32.SecBufferDesc` and add convenience binding as `com.zcsmart.jna.platform.win32.SspiUtil.ManagedSecBufferDesc`. Bind SSPI functions `InitializeSecurityContext`, `AcceptSecurityContext`, `QueryCredentialsAttributes`, `QuerySecurityPackageInfo`, `EncryptMessage`, `DecryptMessage`, `MakeSignature`, `VerifySignature` in `com.zcsmart.jna.platform.win32.Secur32` - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#863](https://github.com/java-native-access/jna/pull/863): Fix ARM softfloat/hardfloat detection by modifying armSoftFloat condition in ELFAnalyser. Before this fix a softfloat binary could be misdetected as hardfloat. - [@kunkun26](https://github.com/kunkun26).
 * [#867](https://github.com/java-native-access/jna/issues/867): Fix memory leak in `COMLateBindingObject#getStringProperty` - [@matthiasblaesing](https://github.com/matthiasblaesing).
-* [#871](https://github.com/java-native-access/jna/issues/871): Fix mapping of libc function `gethostname`, `sethostname`, `getdomainname` and `setdomainname` and bind `com.sun.jna.platform.win32.Winsock2.gethostname(byte[], int)` - [@matthiasblaesing](https://github.com/matthiasblaesing).
+* [#871](https://github.com/java-native-access/jna/issues/871): Fix mapping of libc function `gethostname`, `sethostname`, `getdomainname` and `setdomainname` and bind `com.zcsmart.jna.platform.win32.Winsock2.gethostname(byte[], int)` - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#876](https://github.com/java-native-access/jna/pull/876): Restore java 6 compatibility - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#882](https://github.com/java-native-access/jna/pull/882): Correctly close file in `ELFAnalyser#runDetection`, fix suggested by [@Sylvyrfysh](https://github.com/Sylvyrfysh) in [#880](https://github.com/java-native-access/jna/pull/880) - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#887](https://github.com/java-native-access/jna/issues/887): MacFileUtils.moveToTrash() doesn't work in a sandboxed app fix suggested by [@sobakasu](https://github.com/sobakasu) - [@matthiasblaesing](https://github.com/matthiasblaesing).
-* [#894](https://github.com/java-native-access/jna/issues/894): NullPointerException can be caused by calling `com.sun.jna.platform.win32.COM.util.ProxyObject#dispose` multiple times - [@matthiasblaesing](https://github.com/matthiasblaesing).
+* [#894](https://github.com/java-native-access/jna/issues/894): NullPointerException can be caused by calling `com.zcsmart.jna.platform.win32.COM.util.ProxyObject#dispose` multiple times - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#925](https://github.com/java-native-access/jna/issues/925): Optimize `Structure#validate` and prevent `ArrayIndexOutOfBoundsException` in `SAFEARRAY#read` for zero dimensions - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#340](https://github.com/java-native-access/jna/issues/340): Guard registry handling against out-of-bounds reads by ensuring all read strings are NULL terminated - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#902](https://github.com/java-native-access/jna/issues/902): Allow building JNA on JDK 10. `javah` 
@@ -155,7 +155,7 @@ Bug Fixes
   </ol> - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#958](https://github.com/java-native-access/jna/issues/958): Update for PR 863: Old toolchains produce binaries without hard-/softfloat markers. Rasbian is missinng the markers and the oracle JDK is also affected. For hardfloat detection now also the Arm EABI section is also considered - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#974](https://github.com/java-native-access/jna/issues/974): If the callback code failed to attach to the JVM, this lead to a segfault. The success of attaching to the JVM was checked to late and an invalid `JNIEnv` pointer was used to access the JVM - [@matthiasblaesing](https://github.com/matthiasblaesing).
-* [#1010](https://github.com/java-native-access/jna/issues/1010): Fix binding of `lpAccessName` parameter of `com.sun.jna.platform.win32.Mpr#WNetUseConnection` - [@matthiasblaesing](https://github.com/matthiasblaesing).
+* [#1010](https://github.com/java-native-access/jna/issues/1010): Fix binding of `lpAccessName` parameter of `com.zcsmart.jna.platform.win32.Mpr#WNetUseConnection` - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#384](https://github.com/java-native-access/jna/issues/384): Switch default value for `jna.nosys` to `true`. By default then the embedded native library is used - [@matthiasblaesing](https://github.com/matthiasblaesing).
 
 Breaking Changes
@@ -179,15 +179,15 @@ Breaking Changes
   were removed without replacement. They were turned into NOOPs in the past.
 * `Native#getDirectByteBuffer` was replaced by `Pointer#getByteBuffer`
 * the parameters of the methods `gethostname`, `sethostname`, `getdomainname` 
-   and `setdomainname` in the interface `com.sun.jna.platform.unix.LibCAPI`
+   and `setdomainname` in the interface `com.zcsmart.jna.platform.unix.LibCAPI`
   were changed from `(char[] name, int len)` to `(byte[] name, int len)`
 * `Platform#isAix` was replaced by `Platform#isAIX`
-* `com.sun.jna.platform.win32.Sspi.SecBufferDesc` was incompatibly changed to 
+* `com.zcsmart.jna.platform.win32.Sspi.SecBufferDesc` was incompatibly changed to 
   match the correct native semantics. SecBufferDesc describing more than one
   buffer were broken. For most usecases 
-  `com.sun.jna.platform.win32.SspiUtil.ManagedSecBufferDesc` is the best 
+  `com.zcsmart.jna.platform.win32.SspiUtil.ManagedSecBufferDesc` is the best 
   alternative.
-* `com.sun.jna.platform.win32.WinBase.FILETIME#toLong()` was replaced by
+* `com.zcsmart.jna.platform.win32.WinBase.FILETIME#toLong()` was replaced by
   `com.sun.jna.platform.win32.WinBase.FILETIME#toTime()`
 * `com.sun.jna.platform.win32.Variant#COM_DAYS_ADJUSTMENT` was removed
 * `com.sun.jna.platform.win32.Variant#MICRO_SECONDS_PER_DAY` was removed
@@ -320,7 +320,7 @@ Features
 * [#667](https://github.com/java-native-access/jna/pull/667): Added NtSetSecurityObject and NtQuerySecurityObject to `com.sun.jna.platform.win32.NtDll` - [@amarcionek](https://github.com/amarcionek).
 * [#680](https://github.com/java-native-access/jna/pull/680): Added `SetCurrentProcessExplicitAppUserModelID` and `GetCurrentProcessExplicitAppUserModelID` to `com.sun.jna.platform.win32.Shell32` for setting the [System.AppUserModel.ID](https://msdn.microsoft.com/en-us/library/windows/desktop/dd391569.aspx) of the host process - [@rednoah](https://github.com/rednoah).
 * [#693](https://github.com/java-native-access/jna/pull/693): Bind DDEML (Dynamic Data Exchange Management Library), add a thread implementation that runs a windows message loop - [@matthiasblaesing](https://github.com/matthiasblaesing).
-* [#702](https://github.com/java-native-access/jna/pull/702): Added `GetClientRect` to `com/sun/jna/platform/win32/User32` - [@Jonatino](https://github.com/Jonatino).
+* [#702](https://github.com/java-native-access/jna/pull/702): Added `GetClientRect` to `com/zcsmart/jna/platform/win32/User32` - [@Jonatino](https://github.com/Jonatino).
 * [#689](https://github.com/java-native-access/jna/pull/689): Add `GetProcAddress(HMODULE, int)` to `com.sun.jna.platform.win32.Kernel32` - [@matthiasblaesing](https://github.com/matthiasblaesing).
 * [#723](https://github.com/java-native-access/jna/pull/723): Added `com.sun.jna.platform.win32.Wevtapi` and `com.sun.jna.platform.win32.Winevt` - [@sakamotodesu](https://github.com/sakamotodesu).
 * [#720](https://github.com/java-native-access/jna/issues/720): Added `SetThreadExecutionState` to `com.sun.jna.platform.win32.Kernel32` - [@matthiasblaesing](https://github.com/matthiasblaesing).
@@ -566,7 +566,7 @@ Release 3.5.0
 
 Features
 --------
-* [#62](https://github.com/java-native-access/jna/issues/62) If a callback is required to reside in a DLL, use [`DLLCallback`](https://java-native-access.github.io/jna/3.5.1/javadoc/com/sun/jna/win32/DLLCallback.html) to tag your Callback object - [@twall](https://github.com/twall).
+* [#62](https://github.com/java-native-access/jna/issues/62) If a callback is required to reside in a DLL, use [`DLLCallback`](https://java-native-access.github.io/jna/3.5.1/javadoc/com/zcsmart/jna/win32/DLLCallback.html) to tag your Callback object - [@twall](https://github.com/twall).
 * `Structure.getFieldOrder()` supersedes `Structure.setFieldOrder()` and is now required - [@twall](https://github.com/twall).
 * Search `~/Library/Frameworks` and `/Library/Frameworks` on OSX - [@shaneholloway](https://github.com/shaneholloway).
 * Automatic cleanup of native threads (based on suggestions from neil smith) - [@twall](https://github.com/twall).

@@ -39,7 +39,7 @@
 # protection simply by defining HAVE_PROTECTION.  This option has been only
 # been enabled for those platforms on which it has been tested successfully.
 
-OS=$(shell uname | sed -e 's/CYGWIN.*/win32/g' \
+OS?=$(shell uname | sed -e 's/CYGWIN.*/win32/g' \
 	                -e 's/MINGW32.*/win32/g' \
                         -e 's/SunOS.*/solaris/g' \
                         -e 's/NetBSD/netbsd/g' \

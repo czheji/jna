@@ -21,10 +21,10 @@
  * containing JNA, in file "AL2.0".
  */
 
-package com.sun.jna.platform.win32.COM.util.office.word;
+package com.zcsmart.jna.platform.win32.COM.util.office.word;
 
-import com.sun.jna.platform.win32.COM.util.annotation.ComInterface;
-import com.sun.jna.platform.win32.COM.util.annotation.ComProperty;
+import com.zcsmart.jna.platform.win32.COM.util.annotation.ComInterface;
+import com.zcsmart.jna.platform.win32.COM.util.annotation.ComProperty;
 
 /**
  * <p>uuid({00020953-0000-0000-C000-000000000046})</p>

@@ -2060,7 +2060,7 @@ closure_handler(ffi_cif* cif, void* resp, void** argp, void *cdata)
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    invokePointer
- * Signature: (Lcom/sun/jna/Function;JI[Ljava/lang/Object;)J
+ * Signature: (Lcom/zcsmart/jna/Function;JI[Ljava/lang/Object;)J
  */
 JNIEXPORT jlong JNICALL 
 Java_com_zcsmart_jna_Native_invokePointer (JNIEnv *env, jclass UNUSED(cls),
@@ -2076,7 +2076,7 @@ Java_com_zcsmart_jna_Native_invokePointer (JNIEnv *env, jclass UNUSED(cls),
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    invokeObject
- * Signature: (Lcom/sun/jna/Function;JI[Ljava/lang/Object;)Ljava/lang/Object;
+ * Signature: (Lcom/zcsmart/jna/Function;JI[Ljava/lang/Object;)Ljava/lang/Object;
  */
 JNIEXPORT jobject 
 JNICALL Java_com_zcsmart_jna_Native_invokeObject(JNIEnv *env, jclass UNUSED(cls),
@@ -2092,7 +2092,7 @@ JNICALL Java_com_zcsmart_jna_Native_invokeObject(JNIEnv *env, jclass UNUSED(cls)
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    invokeStructure
- * Signature: (Lcom/sun/jna/Function;JI[Ljava/lang/Object;JJ)V
+ * Signature: (Lcom/zcsmart/jna/Function;JI[Ljava/lang/Object;JJ)V
  */
 JNIEXPORT void JNICALL 
 Java_com_zcsmart_jna_Native_invokeStructure(JNIEnv *env, jclass UNUSED(cls),
@@ -2112,7 +2112,7 @@ Java_com_zcsmart_jna_Native_invokeStructure(JNIEnv *env, jclass UNUSED(cls),
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    invokeDouble
- * Signature: (Lcom/sun/jna/Function;JI[Ljava/lang/Object;)D
+ * Signature: (Lcom/zcsmart/jna/Function;JI[Ljava/lang/Object;)D
  */
 JNIEXPORT jdouble JNICALL
 Java_com_zcsmart_jna_Native_invokeDouble(JNIEnv *env, jclass UNUSED(cls),
@@ -2127,7 +2127,7 @@ Java_com_zcsmart_jna_Native_invokeDouble(JNIEnv *env, jclass UNUSED(cls),
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    invokeFloat
- * Signature: (Lcom/sun/jna/Function;JI[Ljava/lang/Object;)F
+ * Signature: (Lcom/zcsmart/jna/Function;JI[Ljava/lang/Object;)F
  */
 JNIEXPORT jfloat JNICALL
 Java_com_zcsmart_jna_Native_invokeFloat(JNIEnv *env, jclass UNUSED(cls),
@@ -2142,7 +2142,7 @@ Java_com_zcsmart_jna_Native_invokeFloat(JNIEnv *env, jclass UNUSED(cls),
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    invokeInt
- * Signature: (Lcom/sun/jna/Function;JI[Ljava/lang/Object;)I
+ * Signature: (Lcom/zcsmart/jna/Function;JI[Ljava/lang/Object;)I
  */
 JNIEXPORT jint JNICALL
 Java_com_zcsmart_jna_Native_invokeInt(JNIEnv *env, jclass UNUSED(cls),
@@ -2157,7 +2157,7 @@ Java_com_zcsmart_jna_Native_invokeInt(JNIEnv *env, jclass UNUSED(cls),
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    invokeLong
- * Signature: (Lcom/sun/jna/Function;JI[Ljava/lang/Object;)J
+ * Signature: (Lcom/zcsmart/jna/Function;JI[Ljava/lang/Object;)J
  */
 JNIEXPORT jlong JNICALL
 Java_com_zcsmart_jna_Native_invokeLong(JNIEnv *env, jclass UNUSED(cls),
@@ -2172,7 +2172,7 @@ Java_com_zcsmart_jna_Native_invokeLong(JNIEnv *env, jclass UNUSED(cls),
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    invokeVoid
- * Signature: (Lcom/sun/jna/Function;JI[Ljava/lang/Object;)V
+ * Signature: (Lcom/zcsmart/jna/Function;JI[Ljava/lang/Object;)V
  */
 JNIEXPORT void JNICALL
 Java_com_zcsmart_jna_Native_invokeVoid(JNIEnv *env, jclass UNUSED(cls),
@@ -2291,7 +2291,7 @@ Java_com_zcsmart_jna_Native_findSymbol(JNIEnv *env, jclass UNUSED(cls),
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    write
- * Signature: (Lcom/sun/jna/Pointer;JJ[BII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[BII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Pointer_2JJ_3BII
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jbyteArray arr, jint off, jint n)
@@ -2304,7 +2304,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Point
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    write
- * Signature: (Lcom/sun/jna/Pointer;JJ[CII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[CII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Pointer_2JJ_3CII
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jcharArray arr, jint off, jint n)
@@ -2315,7 +2315,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Point
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    write
- * Signature: (Lcom/sun/jna/Pointer;JJ[DII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[DII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Pointer_2JJ_3DII
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jdoubleArray arr, jint off, jint n)
@@ -2328,7 +2328,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Point
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    write
- * Signature: (Lcom/sun/jna/Pointer;JJ[FII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[FII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Pointer_2JJ_3FII
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jfloatArray arr, jint off, jint n)
@@ -2341,7 +2341,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Point
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    write
- * Signature: (Lcom/sun/jna/Pointer;JJ[III)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[III)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Pointer_2JJ_3III
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jintArray arr, jint off, jint n)
@@ -2354,7 +2354,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Point
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    write
- * Signature: (Lcom/sun/jna/Pointer;JJ[JII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[JII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Pointer_2JJ_3JII
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jlongArray arr, jint off, jint n)
@@ -2367,7 +2367,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Point
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    write
- * Signature: (Lcom/sun/jna/Pointer;JJ[SII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[SII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Pointer_2JJ_3SII
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jshortArray arr, jint off, jint n)
@@ -2380,7 +2380,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_write__Lcom_zcsmart_jna_Point
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    indexOf
- * Signature: (Lcom/sun/jna/Pointer;JJB)J
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJB)J
  */
 JNIEXPORT jlong JNICALL Java_com_zcsmart_jna_Native_indexOf
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jbyte value)
@@ -2402,7 +2402,7 @@ JNIEXPORT jlong JNICALL Java_com_zcsmart_jna_Native_indexOf
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    read
- * Signature: (Lcom/sun/jna/Pointer;JJ[BII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[BII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointer_2JJ_3BII
 (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jbyteArray arr, jint off, jint n)
@@ -2415,7 +2415,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointe
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    read
- * Signature: (Lcom/sun/jna/Pointer;JJ[CII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[CII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointer_2JJ_3CII
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jcharArray arr, jint off, jint n)
@@ -2426,7 +2426,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointe
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    read
- * Signature: (Lcom/sun/jna/Pointer;JJ[DII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[DII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointer_2JJ_3DII
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jdoubleArray arr, jint off, jint n)
@@ -2439,7 +2439,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointe
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    read
- * Signature: (Lcom/sun/jna/Pointer;JJ[FII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[FII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointer_2JJ_3FII
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jfloatArray arr, jint off, jint n)
@@ -2452,7 +2452,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointe
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    read
- * Signature: (Lcom/sun/jna/Pointer;JJ[III)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[III)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointer_2JJ_3III
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jintArray arr, jint off, jint n)
@@ -2465,7 +2465,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointe
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    read
- * Signature: (Lcom/sun/jna/Pointer;JJ[JII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[JII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointer_2JJ_3JII
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jlongArray arr, jint off, jint n)
@@ -2478,7 +2478,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointe
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    read
- * Signature: (Lcom/sun/jna/Pointer;JJ[SII)V
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ[SII)V
  */
 JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointer_2JJ_3SII
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jshortArray arr, jint off, jint n)
@@ -2491,7 +2491,7 @@ JNIEXPORT void JNICALL Java_com_zcsmart_jna_Native_read__Lcom_zcsmart_jna_Pointe
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    getByte
- * Signature: (Lcom/sun/jna/Pointer;JJ)B
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ)B
  */
 JNIEXPORT jbyte JNICALL Java_com_zcsmart_jna_Native_getByte
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)
@@ -2504,7 +2504,7 @@ JNIEXPORT jbyte JNICALL Java_com_zcsmart_jna_Native_getByte
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    getChar
- * Signature: (Lcom/sun/jna/Pointer;JJ)C
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ)C
  */
 JNIEXPORT jchar JNICALL Java_com_zcsmart_jna_Native_getChar
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)
@@ -2530,7 +2530,7 @@ JNIEXPORT jlong JNICALL Java_com_zcsmart_jna_Native__1getPointer
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    getDirectByteBuffer
- * Signature: (Lcom/sun/jna/Pointer;JJJ)Ljava/nio/ByteBuffer;
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJJ)Ljava/nio/ByteBuffer;
  */
 JNIEXPORT jobject JNICALL Java_com_zcsmart_jna_Native_getDirectByteBuffer__Lcom_zcsmart_jna_Pointer_2JJJ
     (JNIEnv *env, jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset, jlong length)
@@ -2545,7 +2545,7 @@ JNIEXPORT jobject JNICALL Java_com_zcsmart_jna_Native_getDirectByteBuffer__Lcom_
 /*
  * Class:     com_zcsmart_jna_Native
  * Method:    getDouble
- * Signature: (Lcom/sun/jna/Pointer;JJ)D
+ * Signature: (Lcom/zcsmart/jna/Pointer;JJ)D
  */
 JNIEXPORT jdouble JNICALL Java_com_zcsmart_jna_Native_getDouble
 (JNIEnv * UNUSED_ENV(env), jclass UNUSED(cls), jobject UNUSED(pointer), jlong addr, jlong offset)

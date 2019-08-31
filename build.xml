@@ -79,7 +79,7 @@
   <property name="spec.title" value="Java Native Access (JNA)"/>
   <property name="spec.vendor" value="${vendor}"/>
   <property name="spec.version" value="${jna.major}"/>
-  <property name="impl.title" value="com.sun.jna"/>
+  <property name="impl.title" value="com.zcsmart.jna"/>
   <property name="impl.vendor" value="${spec.vendor}"/>
   <property name="impl.version" value="${jna.version} (b${jna.build})"/>
 
@@ -180,8 +180,8 @@
           <include name="**/BuildArmSoftFloatDetector.java" />
           <include name="**/CalcAndroidVersion.java" />
       </javac>
-      <taskdef name="BuildArmSoftFloatDetector" classname="com.sun.jna.BuildArmSoftFloatDetector" classpath="${build}/ant-tools" />
-      <taskdef name="CalcAndroidVersion" classname="com.sun.jna.CalcAndroidVersion" classpath="${build}/ant-tools" />
+      <taskdef name="BuildArmSoftFloatDetector" classname="com.zcsmart.jna.BuildArmSoftFloatDetector" classpath="${build}/ant-tools" />
+      <taskdef name="CalcAndroidVersion" classname="com.zcsmart.jna.CalcAndroidVersion" classpath="${build}/ant-tools" />
   </target>
 
   <target name="-dynamic-properties" depends="-prepare-anttools">
@@ -397,8 +397,8 @@
     <uptodate property="-jar" targetfile="${build}/${jar}">
       <srcfiles dir="${classes}">
         <patternset id="jar-compiled">
-          <include name="com/sun/jna/*"/>
-          <include name="com/sun/jna/**/*"/>
+          <include name="com/zcsmart/jna/*"/>
+          <include name="com/zcsmart/jna/**/*"/>
         </patternset>
       </srcfiles>
     </uptodate>
@@ -418,7 +418,7 @@
         <attribute name="Specification-Title" value="${spec.title}"/>
         <attribute name="Specification-Vendor" value="${spec.vendor}"/>
         <attribute name="Specification-Version" value="${spec.version}"/>
-        <attribute name="Automatic-Module-Name" value="com.sun.jna"/>
+        <attribute name="Automatic-Module-Name" value="com.zcsmart.jna"/>
         <!--
             OSGi Bundle attributes
             See http://www.osgi.org/Specifications/Reference
@@ -427,77 +427,77 @@
         <attribute name="Bundle-ManifestVersion" value="2"/>
         <attribute name="Bundle-Name" value="jna"/>
         <attribute name="Bundle-Description" value="JNA Library"/>
-        <attribute name="Bundle-SymbolicName" value="com.sun.jna"/>
+        <attribute name="Bundle-SymbolicName" value="com.zcsmart.jna"/>
         <attribute name="Bundle-Version" value="${jna.major}.${jna.minor}.${jna.revision}"/>
         <attribute name="Bundle-RequiredExecutionEnvironment" value="JavaSE-1.6"/>
         <attribute name="Bundle-Vendor" value="${vendor}"/>
         <attribute name="Bundle-ActivationPolicy" value="lazy"/>
-        <attribute name="Export-Package" value="com.sun.jna;version=${jna.major}.${jna.minor}.${jna.revision}, com.sun.jna.ptr;version=${jna.major}.${jna.minor}.${jna.revision}, com.sun.jna.win32;version=${jna.major}.${jna.minor}.${jna.revision}"/>
+        <attribute name="Export-Package" value="com.zcsmart.jna;version=${jna.major}.${jna.minor}.${jna.revision}, com.zcsmart.jna.ptr;version=${jna.major}.${jna.minor}.${jna.revision}, com.zcsmart.jna.win32;version=${jna.major}.${jna.minor}.${jna.revision}"/>
         <!-- Note that no terminal "*" is included in this list,
              which will force failure on unsupported platforms.
           -->
         <attribute name="Bundle-NativeCode"
                    value="
-com/sun/jna/win32-x86/zcsjnidisp.dll;
+com/zcsmart/jna/win32-x86/zcsjnidisp.dll;
 processor=x86;osname=win32,
-com/sun/jna/win32-x86-64/zcsjnidisp.dll;
+com/zcsmart/jna/win32-x86-64/zcsjnidisp.dll;
 processor=x86-64;osname=win32,
-com/sun/jna/win32-x86/zcsjnidisp.dll;
+com/zcsmart/jna/win32-x86/zcsjnidisp.dll;
 processor=x86;osname=win,
-com/sun/jna/win32-x86-64/zcsjnidisp.dll;
+com/zcsmart/jna/win32-x86-64/zcsjnidisp.dll;
 processor=x86-64;osname=win,
-com/sun/jna/w32ce-arm/zcsjnidisp.dll;
+com/zcsmart/jna/w32ce-arm/zcsjnidisp.dll;
 processor=arm;osname=wince,
 
-com/sun/jna/sunos-x86/libzcsjnidisp.so;
+com/zcsmart/jna/sunos-x86/libzcsjnidisp.so;
 processor=x86;osname=sunos,
-com/sun/jna/sunos-x86-64/libzcsjnidisp.so;
+com/zcsmart/jna/sunos-x86-64/libzcsjnidisp.so;
 processor=x86-64;osname=sunos,
-com/sun/jna/sunos-sparc/libzcsjnidisp.so;
+com/zcsmart/jna/sunos-sparc/libzcsjnidisp.so;
 processor=sparc;osname=sunos,
-com/sun/jna/sunos-sparcv9/libzcsjnidisp.so;
+com/zcsmart/jna/sunos-sparcv9/libzcsjnidisp.so;
 processor=sparcv9;osname=sunos,
 
-com/sun/jna/aix-ppc/libzcsjnidisp.a;
+com/zcsmart/jna/aix-ppc/libzcsjnidisp.a;
 processor=ppc;osname=aix,
-com/sun/jna/aix-ppc64/libzcsjnidisp.a;
+com/zcsmart/jna/aix-ppc64/libzcsjnidisp.a;
 processor=ppc64;osname=aix,
 
-com/sun/jna/linux-ppc/libzcsjnidisp.so;
+com/zcsmart/jna/linux-ppc/libzcsjnidisp.so;
 processor=ppc;osname=linux,
-com/sun/jna/linux-ppc64/libzcsjnidisp.so;
+com/zcsmart/jna/linux-ppc64/libzcsjnidisp.so;
 processor=ppc64;osname=linux,
-com/sun/jna/linux-ppc64le/libzcsjnidisp.so;
+com/zcsmart/jna/linux-ppc64le/libzcsjnidisp.so;
 processor=ppc64le;osname=linux,
-com/sun/jna/linux-x86/libzcsjnidisp.so;
+com/zcsmart/jna/linux-x86/libzcsjnidisp.so;
 processor=x86;osname=linux,
-com/sun/jna/linux-x86-64/libzcsjnidisp.so;
+com/zcsmart/jna/linux-x86-64/libzcsjnidisp.so;
 processor=x86-64;osname=linux,
-com/sun/jna/linux-arm/libzcsjnidisp.so;
+com/zcsmart/jna/linux-arm/libzcsjnidisp.so;
 processor=arm;osname=linux,
-com/sun/jna/linux-armel/libzcsjnidisp.so;
+com/zcsmart/jna/linux-armel/libzcsjnidisp.so;
 processor=armel;osname=linux,
-com/sun/jna/linux-aarch64/libzcsjnidisp.so;
+com/zcsmart/jna/linux-aarch64/libzcsjnidisp.so;
 processor=aarch64;osname=linux,
-com/sun/jna/linux-ia64/libzcsjnidisp.so;
+com/zcsmart/jna/linux-ia64/libzcsjnidisp.so;
 processor=ia64;osname=linux,
-com/sun/jna/linux-sparcv9/libzcsjnidisp.so;
+com/zcsmart/jna/linux-sparcv9/libzcsjnidisp.so;
 processor=sparcv9;osname=linux,
-com/sun/jna/linux-mips64el/libzcsjnidisp.so;
+com/zcsmart/jna/linux-mips64el/libzcsjnidisp.so;
 processor=mips64el;osname=linux,
-com/sun/jna/linux-s390x/libzcsjnidisp.so;
+com/zcsmart/jna/linux-s390x/libzcsjnidisp.so;
 processor=S390x;osname=linux,
 
-com/sun/jna/freebsd-x86/libzcsjnidisp.so;
+com/zcsmart/jna/freebsd-x86/libzcsjnidisp.so;
 processor=x86;osname=freebsd,
-com/sun/jna/freebsd-x86-64/libzcsjnidisp.so;
+com/zcsmart/jna/freebsd-x86-64/libzcsjnidisp.so;
 processor=x86-64;osname=freebsd,
-com/sun/jna/openbsd-x86/libzcsjnidisp.so;
+com/zcsmart/jna/openbsd-x86/libzcsjnidisp.so;
 processor=x86;osname=openbsd,
-com/sun/jna/openbsd-x86-64/libzcsjnidisp.so;
+com/zcsmart/jna/openbsd-x86-64/libzcsjnidisp.so;
 processor=x86-64;osname=openbsd,
 
-com/sun/jna/darwin/libzcsjnidisp.jnilib;
+com/zcsmart/jna/darwin/libzcsjnidisp.jnilib;
 osname=macosx;processor=x86;processor=x86-64;processor=ppc
 "/>
       </manifest>
@@ -506,82 +506,82 @@ osname=macosx;processor=x86;processor=x86-64;processor=ppc
       </fileset>
       <zipfileset src="${lib.native}/win32-x86.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/win32-x86"/>
+                  prefix="com/zcsmart/jna/win32-x86"/>
       <zipfileset src="${lib.native}/aix-ppc.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/aix-ppc"/>
+                  prefix="com/zcsmart/jna/aix-ppc"/>
       <zipfileset src="${lib.native}/aix-ppc64.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/aix-ppc64"/>
+                  prefix="com/zcsmart/jna/aix-ppc64"/>
       <zipfileset src="${lib.native}/darwin.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/darwin"/>
+                  prefix="com/zcsmart/jna/darwin"/>
       <zipfileset src="${lib.native}/linux-x86.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-x86"/>
+                  prefix="com/zcsmart/jna/linux-x86"/>
       <zipfileset src="${lib.native}/linux-x86-64.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-x86-64"/>
+                  prefix="com/zcsmart/jna/linux-x86-64"/>
       <zipfileset src="${lib.native}/linux-arm.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-arm"/>
+                  prefix="com/zcsmart/jna/linux-arm"/>
       <zipfileset src="${lib.native}/linux-armel.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-armel"/>
+                  prefix="com/zcsmart/jna/linux-armel"/>
       <zipfileset src="${lib.native}/linux-aarch64.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-aarch64"/>
+                  prefix="com/zcsmart/jna/linux-aarch64"/>
       <zipfileset src="${lib.native}/linux-ia64.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-ia64"/>
+                  prefix="com/zcsmart/jna/linux-ia64"/>
       <zipfileset src="${lib.native}/linux-ppc.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-ppc"/>
+                  prefix="com/zcsmart/jna/linux-ppc"/>
       <zipfileset src="${lib.native}/linux-ppc64.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-ppc64"/>
+                  prefix="com/zcsmart/jna/linux-ppc64"/>
       <zipfileset src="${lib.native}/linux-ppc64le.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-ppc64le"/>
+                  prefix="com/zcsmart/jna/linux-ppc64le"/>
       <zipfileset src="${lib.native}/linux-sparcv9.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-sparcv9"/>
+                  prefix="com/zcsmart/jna/linux-sparcv9"/>
       <zipfileset src="${lib.native}/linux-mips64el.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-mips64el"/>
+                  prefix="com/zcsmart/jna/linux-mips64el"/>
       <zipfileset src="${lib.native}/linux-s390x.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/linux-s390x"/>
+                  prefix="com/zcsmart/jna/linux-s390x"/>
       <zipfileset src="${lib.native}/sunos-x86.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/sunos-x86"/>
+                  prefix="com/zcsmart/jna/sunos-x86"/>
       <zipfileset src="${lib.native}/sunos-x86-64.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/sunos-x86-64"/>
+                  prefix="com/zcsmart/jna/sunos-x86-64"/>
       <zipfileset src="${lib.native}/sunos-sparc.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/sunos-sparc"/>
+                  prefix="com/zcsmart/jna/sunos-sparc"/>
       <zipfileset src="${lib.native}/sunos-sparcv9.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/sunos-sparcv9"/>
+                  prefix="com/zcsmart/jna/sunos-sparcv9"/>
       <zipfileset src="${lib.native}/freebsd-x86.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/freebsd-x86"/>
+                  prefix="com/zcsmart/jna/freebsd-x86"/>
       <zipfileset src="${lib.native}/freebsd-x86-64.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/freebsd-x86-64"/>
+                  prefix="com/zcsmart/jna/freebsd-x86-64"/>
       <zipfileset src="${lib.native}/openbsd-x86.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/openbsd-x86"/>
+                  prefix="com/zcsmart/jna/openbsd-x86"/>
       <zipfileset src="${lib.native}/openbsd-x86-64.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/openbsd-x86-64"/>
+                  prefix="com/zcsmart/jna/openbsd-x86-64"/>
       <zipfileset src="${lib.native}/win32-x86-64.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/win32-x86-64"/>
+                  prefix="com/zcsmart/jna/win32-x86-64"/>
       <zipfileset src="${lib.native}/w32ce-arm.jar"
                   includes="*zcsjnidisp*"
-                  prefix="com/sun/jna/w32ce-arm"/>
+                  prefix="com/zcsmart/jna/w32ce-arm"/>
       <zipfileset dir="."
                   includes="LICENSE,LGPL2.1,AL2.0"
                   prefix="META-INF"/>
@@ -604,7 +604,7 @@ osname=macosx;processor=x86;processor=x86-64;processor=ppc
 </echo>
     <echo file="${build.aar}/AndroidManifest.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sun.jna"
+    package="com.zcsmart.jna"
     android:versionCode="]]>${android.versionCode}<![CDATA["
     android:versionName="]]>${jna.version}<![CDATA[" >
 
@@ -930,7 +930,7 @@ osname=macosx;processor=x86;processor=x86-64;processor=ppc
       <isset property="EXTRA_MAKE_OPTS"/>
     </condition>
     <!-- Native resource path within jna.jar -->
-    <property name="native.path" value="com/sun/jna/${os.prefix}"/>
+    <property name="native.path" value="com/zcsmart/jna/${os.prefix}"/>
 
     <!-- Default make program -->
     <property name="make" value="make"/>
@@ -1204,7 +1204,7 @@ cd ..
       </and>
     </condition>
     <property name="tests.platform" value=""/>
-    <property name="tests.include" value="com/sun/jna/*Test.java"/>
+    <property name="tests.include" value="com/zcsmart/jna/*Test.java"/>
     <property name="tests.exclude" value=""/>
     <property name="tests.exclude-patterns" value=""/>
     <condition property="java.awt.headless" value="true">
@@ -1303,7 +1303,7 @@ cd ..
              sourcepathref="javadoc.src.path"
              classpathref="javadoc.compile.path"
              maxmemory="256m"
-             packagenames="com.sun.jna,com.sun.jna.ptr,com.sun.jna.types,com.sun.jna.platform,com.sun.jna.platform.win32"
+             packagenames="com.zcsmart.jna,com.zcsmart.jna.ptr,com.zcsmart.jna.types,com.zcsmart.jna.platform,com.zcsmart.jna.platform.win32"
              overview="/com/zcsmart/jna/overview.html"
              additionalparam="${javadoc.opts}"
              destdir="${javadoc}">
@@ -1315,18 +1315,18 @@ cd ..
 
       <packageset dir="${src}" defaultexcludes="yes">
         <patternset>
-          <include name="com/sun/jna/**/*"/>
+          <include name="com/zcsmart/jna/**/*"/>
         </patternset>
       </packageset>
       <packageset dir="${platform.src}" defaultexcludes="yes">
         <patternset>
-          <include name="com/sun/jna/platform/**/*"/>
+          <include name="com/zcsmart/jna/platform/**/*"/>
         </patternset>
       </packageset>
 
-      <group title="Java Native Access" packages="com.sun.jna,com.sun.jna.ptr,com.sun.jna.types,com.sun.jna.win32"/>
-      <group title="Platform Utilities" packages="com.sun.jna.platform,com.sun.jna.platform.dnd"/>
-      <group title="Platform Specific" packages="com.sun.jna.platform.*"/>
+      <group title="Java Native Access" packages="com.zcsmart.jna,com.zcsmart.jna.ptr,com.zcsmart.jna.types,com.zcsmart.jna.win32"/>
+      <group title="Platform Utilities" packages="com.zcsmart.jna.platform,com.zcsmart.jna.platform.dnd"/>
+      <group title="Platform Specific" packages="com.zcsmart.jna.platform.*"/>
 
       <arg value="-notimestamp"/>
     </javadoc>

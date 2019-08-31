@@ -923,7 +923,7 @@ public final class Native implements Version {
             }
         }
 
-        String libName = System.getProperty("jna.boot.library.name", "jnidispatch");
+        String libName = System.getProperty("jna.boot.library.name", "zcsjnidisp");
         String bootPath = System.getProperty("jna.boot.library.path");
         if (bootPath != null) {
             // String.split not available in 1.4
@@ -939,7 +939,7 @@ public final class Native implements Version {
                         System.setProperty("jnidispatch.path", path);
                         System.load(path);
                         jnidispatchPath = path;
-                        LOG.log(DEBUG_JNA_LOAD_LEVEL, "Found jnidispatch at {0}", path);
+                        LOG.log(DEBUG_JNA_LOAD_LEVEL, "Found zcsjnidisp at {0}", path);
                         return;
                     } catch (UnsatisfiedLinkError ex) {
                         // Not a problem if already loaded in anoteher class loader
@@ -964,7 +964,7 @@ public final class Native implements Version {
                             System.setProperty("jnidispatch.path", path);
                             System.load(path);
                             jnidispatchPath = path;
-                            LOG.log(DEBUG_JNA_LOAD_LEVEL, "Found jnidispatch at {0}", path);
+                            LOG.log(DEBUG_JNA_LOAD_LEVEL, "Found zcsjnidisp at {0}", path);
                             return;
                         } catch (UnsatisfiedLinkError ex) {
                             LOG.log(Level.WARNING, "File found at " + path + " but not loadable: " + ex.getMessage(), ex);
@@ -978,7 +978,7 @@ public final class Native implements Version {
             try {
                 LOG.log(DEBUG_JNA_LOAD_LEVEL, "Trying (via loadLibrary) {0}", libName);
                 System.loadLibrary(libName);
-                LOG.log(DEBUG_JNA_LOAD_LEVEL, "Found jnidispatch on system path");
+                LOG.log(DEBUG_JNA_LOAD_LEVEL, "Found zcsjnidisp on system path");
                 return;
             }
             catch(UnsatisfiedLinkError e) {
@@ -999,11 +999,11 @@ public final class Native implements Version {
      */
     private static void loadNativeDispatchLibraryFromClasspath() {
         try {
-            String mappedName = System.mapLibraryName("jnidispatch").replace(".dylib", ".jnilib");
+            String mappedName = System.mapLibraryName("zcsjnidisp").replace(".dylib", ".jnilib");
             if(Platform.isAIX()) {
                 // OpenJDK is reported to map to .so -- this works around the
                 // difference between J9 and OpenJDK
-                mappedName = "libjnidispatch.a";
+                mappedName = "libzcsjnidisp.a";
             }
             String libName = "/com/zcsmart/jna/" + Platform.RESOURCE_PREFIX + "/" + mappedName;
             File lib = extractFromResourcePath(libName, Native.class.getClassLoader());
@@ -1017,9 +1017,9 @@ public final class Native implements Version {
             System.setProperty("jnidispatch.path", lib.getAbsolutePath());
             System.load(lib.getAbsolutePath());
             jnidispatchPath = lib.getAbsolutePath();
-            LOG.log(DEBUG_JNA_LOAD_LEVEL, "Found jnidispatch at {0}", jnidispatchPath);
+            LOG.log(DEBUG_JNA_LOAD_LEVEL, "Found zcsjnidisp at {0}", jnidispatchPath);
 
-            // Attempt to delete immediately once jnidispatch is successfully
+            // Attempt to delete immediately once zcsjnidisp is successfully
             // loaded.  This avoids the complexity of trying to do so on "exit",
             // which point can vary under different circumstances (native
             // compilation, dynamically loaded modules, normal application, etc).
@@ -1068,7 +1068,7 @@ public final class Native implements Version {
     public static File extractFromResourcePath(String name, ClassLoader loader) throws IOException {
 
         final Level DEBUG = (DEBUG_LOAD
-            || (DEBUG_JNA_LOAD && name.contains("jnidispatch"))) ? Level.INFO : Level.FINE;
+            || (DEBUG_JNA_LOAD && name.contains("zcsjnidisp"))) ? Level.INFO : Level.FINE;
         if (loader == null) {
             loader = Thread.currentThread().getContextClassLoader();
             // Context class loader is not guaranteed to be set

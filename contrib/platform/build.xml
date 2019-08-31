@@ -233,7 +233,7 @@ com.sun.jna.platform.wince;version=${osgi.version}
         <batchtest todir="${results.junit}">
           <fileset dir="${test.src.dir}" excludes="${tests.exclude-patterns}">
             <!-- Until StructureFieldOrderTest gets fixed up a little -->
-            <include name="com/sun/jna/platform/*Test.java" />
+            <include name="com/zcsmart/jna/platform/*Test.java" />
             <include name="${tests.platform.mac}"/>
             <include name="${tests.platform.windows}"/>
             <include name="${tests.platform.linux}"/>
@@ -254,8 +254,8 @@ com.sun.jna.platform.wince;version=${osgi.version}
 
     <!-- One-off test to check field order definitions -->
     <target name="test-field-order" depends="-pre-test-run-single" >
-        <!--<property name="test.includes" value="com/sun/jna/platform/**/*.java"/>-->
-        <property name="test.includes" value="com/sun/jna/platform/StructureFieldOrderTest.java"/>
+        <!--<property name="test.includes" value="com/zcsmart/jna/platform/**/*.java"/>-->
+        <property name="test.includes" value="com/zcsmart/jna/platform/StructureFieldOrderTest.java"/>
         <property name="javac.includes" value="**/*"/>
         <antcall target="test-single"/>
     </target>

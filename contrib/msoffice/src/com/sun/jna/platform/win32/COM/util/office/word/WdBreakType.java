@@ -21,9 +21,9 @@
  * containing JNA, in file "AL2.0".
  */
 
-package com.sun.jna.platform.win32.COM.util.office.word;
+package com.zcsmart.jna.platform.win32.COM.util.office.word;
 
-import com.sun.jna.platform.win32.COM.util.IComEnum;
+import com.zcsmart.jna.platform.win32.COM.util.IComEnum;
 
 /**
  * <p>uuid({58B14C6F-0FE6-3BCA-880E-E3A9C039E588})</p>

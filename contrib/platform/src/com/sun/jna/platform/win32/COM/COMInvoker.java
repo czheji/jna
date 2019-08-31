@@ -21,12 +21,12 @@
  * A copy is also included in the downloadable source code package
  * containing JNA, in file "AL2.0".
  */
-package com.sun.jna.platform.win32.COM;
+package com.zcsmart.jna.platform.win32.COM;
 
-import com.sun.jna.Function;
-import com.sun.jna.Native;
-import com.sun.jna.Pointer;
-import com.sun.jna.PointerType;
+import com.zcsmart.jna.Function;
+import com.zcsmart.jna.Native;
+import com.zcsmart.jna.Pointer;
+import com.zcsmart.jna.PointerType;
 
 public abstract class COMInvoker extends PointerType {
 
