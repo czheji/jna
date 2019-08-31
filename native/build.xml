@@ -161,8 +161,8 @@
             </not>
         </and>
     </condition>
-    <property name="resource.file.path" location="${build.native.folder}${file.separator}jnidispatch.rc"/>
-    <!-- jnidispatch library release version -->
+    <property name="resource.file.path" location="${build.native.folder}${file.separator}zcsjnidisp.rc"/>
+    <!-- zcsjnidisp library release version -->
     <property name="jni.major" value="4"/>
     <property name="jni.minor" value="0"/>
     <property name="jni.revision" value="1"/>
@@ -171,7 +171,7 @@
     <property name="jni.md5" value="1a6047467b59e8748f975e03016ce3d9"/>
 
     <target name="create-version-resource" unless="-rsrc" description="Generate w32 DLL version resource information">
-        <copy file="${module.root.folder}${file.separator}jnidispatch.rc" tofile="${resource.file.path}"
+        <copy file="${module.root.folder}${file.separator}zcsjnidisp.rc" tofile="${resource.file.path}"
               verbose="true"/>
         <property name="w32.jni.version" value="${jni.major},${jni.minor},${jni.revision},${jni.build}"/>
         <property name="w32.jna.version" value="${jna.major},${jna.minor},${jna.revision},${jna.build}"/>

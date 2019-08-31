@@ -69,7 +69,7 @@ FFI_LIB=$(FFI_BUILD)/.libs/libffi$(ARSFX)
 FFI_ENV=CC="$(CC)" CFLAGS="$(COPT) $(CDEBUG)" CPPFLAGS="$(CDEFINES)"
 FFI_CONFIG=--enable-static --disable-shared --with-pic=yes
 endif
-LIBRARY=$(BUILD)/$(LIBPFX)jnidispatch$(JNISFX)
+LIBRARY=$(BUILD)/$(LIBPFX)zcsjnidisp$(JNISFX)
 TESTLIB=$(BUILD)/$(LIBPFX)testlib$(LIBSFX)
 TESTLIB_JAR=$(BUILD)/$(LIBPFX)testlib-jar$(LIBSFX)
 TESTLIB_PATH=$(BUILD)/$(LIBPFX)testlib-path$(LIBSFX)
@@ -199,7 +199,7 @@ STRIP=arm-mingw32ce-strip -x
 LIBPFX=
 LIBSFX=.dll
 HOST_CONFIG=--host=arm-mingw32ce
-# libffi must use GNU ld; jnidispatch.dll requires gcc
+# libffi must use GNU ld; zcsjnidisp.dll requires gcc
 FFI_ENV+=LD=arm-mingw32ce-ld CPP=cpp CFLAGS="$(CDEFINES)"
 PHONEME=../phoneme/cdc/src
 JAVA_INCLUDES=-I$(PHONEME)/share/javavm/export -I$(PHONEME)/share -I$(PHONEME)/win32 -I$(PHONEME)/win32-arm
@@ -320,7 +320,7 @@ ifeq ($(ARCH),ppc)
 endif
 endif
 
-# CC_OPTS only applied to objects build for jnidispatch, not for libffi
+# CC_OPTS only applied to objects build for zcsjnidisp, not for libffi
 # -Wno-unknown-warning-option 
 #                => Suppress warning for unknown warnings
 # -Werror        => Treat warnings as errors
