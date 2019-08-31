@@ -173,7 +173,7 @@ LD=$(CC)
 RANLIB=$(PREFIX)ranlib
 STRIP=$(PREFIX)strip -x
 CDEFINES=-DNO_JAWT -DNO_WEAK_GLOBALS -DFFI_MMAP_EXEC_WRIT=1 -DFFI_MMAP_EXEC_SELINUX=0
-COPT+=-fpic -ffunction-sections -funwind-tables -fno-short-enums -include glibc_old.h
+COPT+=-fpic -ffunction-sections -funwind-tables -fno-short-enums
 JAVA_INCLUDES=
 CINCLUDES+=-I"$(NDK_PLATFORM)/arch-$(AARCH)/usr/include" # -I/usr/include
 LIBS=-nostdlib -L"$(NDK_PLATFORM)/arch-$(AARCH)$(ALIBDIR)/" -lgcc -lc -ldl -lm
