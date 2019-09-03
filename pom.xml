@@ -6,7 +6,7 @@
 
     <groupId>com.zcsmart</groupId>
     <artifactId>zcs-jna</artifactId>
-    <version>5.4.0-SNAPSHOT</version>
+    <version>5.4.0-2</version>
     <packaging>jar</packaging>
 
     <name>Java Native Access</name>
@@ -53,31 +53,31 @@
         </repository>
     </repositories>
 
-<!--    <distributionManagement>-->
-<!--        <repository>-->
-<!--            <id>releases</id>-->
-<!--            <name>Nexus Release Repository</name>-->
-<!--            <url>http://172.18.80.22:8081/nexus/content/repositories/releases/</url>-->
-<!--        </repository>-->
-<!--        <snapshotRepository>-->
-<!--            <id>snapshots</id>-->
-<!--            <name>Nexus Snapshot Repository</name>-->
-<!--            <url>http://172.18.80.22:8081/nexus/content/repositories/snapshots/</url>-->
-<!--        </snapshotRepository>-->
-<!--    </distributionManagement>-->
-
     <distributionManagement>
         <repository>
-            <id>releases_public</id>
+            <id>releases</id>
             <name>Nexus Release Repository</name>
-            <url>http://219.141.206.18:18081/nexus/content/repositories/releases/</url>
+            <url>http://172.18.80.253:8081/nexus/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
-            <id>snapshots_public</id>
+            <id>snapshots</id>
             <name>Nexus Snapshot Repository</name>
-            <url>http://219.141.206.18:18081/nexus/content/repositories/snapshots/</url>
+            <url>http://172.18.80.253:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
+
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>releases_public</id>-->
+<!--            <name>Nexus Release Repository</name>-->
+<!--            <url>http://219.141.206.18:18081/nexus/content/repositories/releases/</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>snapshots_public</id>-->
+<!--            <name>Nexus Snapshot Repository</name>-->
+<!--            <url>http://219.141.206.18:18081/nexus/content/repositories/snapshots/</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
 
     <developers>
         <developer>
